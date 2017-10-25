@@ -1,0 +1,1032 @@
+---
+title: "OA stratification"
+output: html_notebook
+---
+
+Stratification of OA PLC patients
+RNA-seq data quantified with kallisto and the output sumarised to a counts matrix using txi-import
+
+
+Set up the code and load the libraries
+```{r, include=FALSE}
+#load the libraries
+library(DESeq2)
+library(RColorBrewer)
+library(org.Hs.eg.db)
+library(biomaRt)
+library(goseq)
+library(reactome.db)
+library(gdata)
+library(sva)
+library(limma)
+library(ggplot2)
+library(NMF)
+library(gtools)
+library(gdata)
+library(VennDiagram)
+library(gplots)
+library(pamr)
+library(caret)
+library(tidyr)
+library(igraph)
+library(EnsDb.Hsapiens.v79)
+library(dplyr)
+library(NMF)
+library(inline)
+library(Rcpp)
+library(RcppArmadillo)
+library(gridGraphics)
+library(gridExtra)
+library(cowplot)
+library(xlsx)
+library(pROC)
+
+#load the utility functions
+source("./UtilityFunctions.R")
+
+```
+
+In total 10 nonOA and 60 OA PLC samples. Patient details gives mankin grade, bmi, age, sex, date of sequencing, and pain scores.
+
+Set up the data
+```{r}
+#load counts matrix from txi-import using kallisto abundance matrices
+load("data/txi.RData")
+
+#load patient details
+patientDetails<-read.csv("data/patientDetails_all_withMed.csv",stringsAsFactors = F)
+
+#load the human protein interaction network
+humanNetwork<-read.delim("data/HumanNetwork.txt",header = F)
+humanNetwork<-graph.data.frame(humanNetwork,directed = F)
+
+#match up the order of the patient details and the expression data
+txi$counts <- txi$counts[ ,match(unique(as.character(patientDetails$name)),colnames(txi$counts))]
+txi$abundance <- txi$abundance[ ,match(unique(as.character(patientDetails$name)),colnames(txi$abundance))]
+txi$length <- txi$length[ ,match(unique(as.character(patientDetails$name)),colnames(txi$length))]
+
+```
+
+Comparison of the OA and nonOA GAG and DNA
+```{r}
+#Load the stats
+GAG<-read.csv("data/GAG.csv")
+DNA<-read.csv("data/DNA.csv")
+patientDetails$OA<-ifelse(grepl("SH0", patientDetails$name),"OA","NonOA")
+patientDetails<-patientDetails[!duplicated(patientDetails$name),]
+
+#make plot for GAG
+patientGAG<- ggplot(GAG, aes ( x= Group, y= Average,fill=Group))+ geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white")                                       )+ylab(expression(paste(GAG*' '*mu*'g/'*mg)))+xlab(label="Disease") +  theme_classic(base_size = 24) +theme(axis.title.x = element_blank()) +  guides(fill=FALSE)
+
+#make plot for DNA
+patientDNA<- ggplot(DNA, aes ( x= Group, y= Average,fill=Group))+ geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white")                                                                            )+ylab(expression(paste(DNA*' '*mu*'g/'*mg)))+xlab(label="Disease") +  theme_classic(base_size = 24) +theme(axis.title.x = element_blank()) +  guides(fill=FALSE)
+
+#make plot for Modified Mankin Score
+patientScore<- ggplot(patientDetails, aes ( x= OA, y= Modified.Mankin.Score,fill=OA))+ geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white")                                                                            )+ylab(label="Mankin Score")+xlab(label="Disease") +  theme_classic(base_size = 24) +theme(axis.title.x = element_blank()) +  guides(fill=FALSE)
+
+#Make composite fig
+SupplFig1<-ggdraw()+
+	draw_plot(patientGAG, x=0, y=.5, width=0.5, height=.5,scale=0.9)+
+	draw_plot(patientDNA, x=.5, y=.5, width=0.5, height=.5,scale=0.9) +
+  draw_plot(patientScore, x=.33, y=0, width=0.5, height=0.5,scale=0.9) +
+  draw_plot_label(label=LETTERS[1:3],x=c(0,0.5,0.33), y=c(1,1,0.5), fontface='bold',size = 25)
+
+
+
+
+save_plot("results/SupplFig1.png",SupplFig1,base_height = 8,base_width = 12,dpi=600)
+
+```
+
+PCA analysis of the entire expression dataset
+```{r}
+#load patient details
+patientDetails<-read.csv("data/patientDetails_all_withMed.csv",stringsAsFactors = F)
+
+#Get the batches and variance stabilise the data
+batches<-patientDetails[!duplicated(patientDetails$name),"batch"]
+colData<-data.frame(batches)
+getPalette = colorRampPalette(brewer.pal(8, "Set1"))
+
+dds<-DESeqDataSetFromTximport(txi,colData,~1)
+dds<-varianceStabilizingTransformation(assay(dds))
+
+#keep protein coding only to reduce complexity of clustering
+endf <- GenomicFeatures::genes(EnsDb.Hsapiens.v79, return.type="DataFrame")
+use<-rownames(dds) %in% endf[ endf$gene_biotype=="protein_coding","gene_id"]
+dds<-dds[use,]
+
+#soft filtering for expression
+use <- apply(dds, 1, function(k) mean(k > 5)) > 0.5
+dds<-dds[use,]
+
+#PCA
+pca<-prcomp(t(as.matrix(dds)))
+comp <- data.frame(pca$x[,1:2])
+Disease<-rep(1,70)
+Disease[grep("MRI",colnames(txi$counts))]<-2
+Disease[grep("RJ",colnames(txi$counts))]<-2
+plot(comp[,1:2], col="black",bg=getPalette(13)[as.numeric(batches)],pch=c(21,24)[as.numeric(Disease)],cex=1.5)
+
+
+
+```
+
+Batch effect correction with pSVA for the unsupervised clustering
+```{r}
+#correct counts matrix with pSVA
+correctedMatrix.complete<-pSVA(as.matrix(dds),batches,NULL)
+
+#PCA and plot
+pca<-prcomp(t(as.matrix(correctedMatrix.complete)))
+comp <- data.frame(pca$x[,1:2])
+Disease<-rep(1,70)
+Disease[grep("MRI",colnames(correctedMatrix.complete))]<-2
+Disease[grep("RJ",colnames(correctedMatrix.complete))]<-2
+plot(comp[,1:2], col="black",bg=getPalette(13)[as.numeric(batches)],pch=c(21,24)[as.numeric(Disease)],cex=1.5)
+
+```
+PCA of the discovery cohort - first 54 columns
+```{r}
+#PCA and plot
+pca<-prcomp(t(as.matrix(correctedMatrix.complete[,1:54])))
+comp <- data.frame(pca$x[,1:2])
+
+#show OA vs nonOA in the discovery cohort
+Disease<-rep("OA",54)
+Disease[grep("MRI",colnames(correctedMatrix.complete))]<-"Non-OA"
+Disease[grep("RJ",colnames(correctedMatrix.complete))]<-"Non-OA"
+
+pca.discovery.plot<-ggplot(data=comp, aes(x=PC1, y=PC2, color= Disease)) + geom_point(size=3) + xlab("PC1") + ylab("PC2") +  coord_fixed() + scale_colour_manual(name=Disease,values = c("darkgrey","black"))+cowplot::theme_cowplot(font_size = 16) + theme(legend.title=element_blank(),legend.background =element_rect(fill="white",size=0.5, linetype="solid",colour ="black"))
+
+pca.discovery.plot
+                                                                                                                                                            
+```
+
+Match the expression data to the PPI for network contrained clustering - create seperate matrices for the discovery and validation cohort.
+
+```{r}
+#convert ensembl ID to gene symbol
+endf <- GenomicFeatures::genes(EnsDb.Hsapiens.v79, return.type="DataFrame")
+ens2gene <- as.data.frame(endf[,c("gene_id","gene_name")])
+correctedMatrix.complete<-as.data.frame(correctedMatrix.complete)
+correctedMatrix.complete$mean<-rowMeans(correctedMatrix.complete)
+correctedMatrix.complete<-merge(correctedMatrix.complete,ens2gene,by.x="row.names",by.y="gene_id")
+
+correctedMatrix.complete <- correctedMatrix.complete %>% group_by(gene_name) %>%  slice(which.max(mean)) %>% as.data.frame
+
+#filter the network based on expressed genes
+use<-na.omit(match(correctedMatrix.complete$gene_name,V(humanNetwork)$name))
+OA.network<-induced.subgraph(humanNetwork,use)
+OA.network<-decompose.graph(OA.network)[[1]]
+
+#make the 44 patient discovery matrix
+use<-na.omit(match(V(OA.network)$name,correctedMatrix.complete$gene_name))
+discoveryMatrix<-correctedMatrix.complete[use,]
+rownames(discoveryMatrix)<-discoveryMatrix$gene_name
+discoveryMatrix<-discoveryMatrix[,c(-1,-72,-73)]
+controls<-c(grep("MRI",colnames(discoveryMatrix)),grep("RJ",colnames(discoveryMatrix)))
+discoveryMatrix<-discoveryMatrix[,-controls]
+discoveryMatrix<-discoveryMatrix[,1:44]
+
+#make the 16 patient validation matrix
+validationMatrix<-correctedMatrix.complete[use,]
+rownames(validationMatrix)<-validationMatrix$gene_name
+validationMatrix<-validationMatrix[,c(-1,-72,-73)]
+controls<-c(grep("MRI",colnames(validationMatrix)),grep("RJ",colnames(validationMatrix)))
+validationMatrix<-validationMatrix[,-controls]
+validationMatrix<-validationMatrix[,45:60]
+
+
+```
+
+Calculate the influence network from the PPI network - takes a fair while to run
+```{r, eval=FALSE, include=FALSE}
+#calculate the influence matrix
+invert_shifted_laplacian2 <- function(L, gamma, remove_diags=FALSE, 
+                                      keep_colnames=TRUE){
+  
+  # L is laplacian of the network (graph.laplacian(g) from igraph)
+  L_shifted_inverse <- solve(-(-L - gamma*diag(nrow(L))))
+  if (remove_diags==TRUE){
+    diag(L_shifted_inverse) <- 0
+  }
+  if (keep_colnames==TRUE){
+    # Add colnames
+    colnames(L_shifted_inverse) <- colnames(L)
+    rownames(L_shifted_inverse) <- rownames(L)
+  }
+  return(L_shifted_inverse)
+}
+
+
+gamma<-as.numeric(26) # the mean degree of the network
+L <- graph.laplacian(OA.network,weights=NULL) # Laplacian matrix
+L_shifted_inv <- invert_shifted_laplacian2(L, gamma, remove_diags=TRUE, keep_colnames=TRUE)
+save(L_shifted_inv,file="InfluenceMatrix170317.RData")
+
+
+nn=11 # as in hofree et al
+adj <- apply(L_shifted_inv, 1, function(drow){
+  cut <- sort(drow,decreasing=T)[nn] #this is the nn+1 smallest
+  ifelse(drow>=cut,1,0)
+})
+adj <- (adj | t(adj)) + 0 #make it symmetric,
+# (the + 0 turns it back to numeric 0/1)
+sum(adj!=t(adj)) == 0
+
+
+
+
+```
+
+networkNMF example - ran 500 times on multi node cluster - very time consuming
+
+Use inline C code to define the NMF model.
+```{r, eval=FALSE, include=FALSE}
+netNMF2<-function(i,target,model,...) {
+  
+  #get W and H
+  U <- .basis(model);
+  V <- t(.coef(model));
+
+  # lambda=1
+  print(dim(target))
+  print(dim(U))
+  print(dim(V))
+
+  # h = h * (target %*% w + (influenceNetwork %*% h)) / (h %*% t(w) %*% w + D %*% h);
+  # 
+  # 
+  # w =  w * (t(target) %*% h) / (w %*% t(h) %*% h)
+
+  # #update w and h
+  cat("i is" ,i)
+    U=rcppWUpdate2(X=target,U=U,V=V,W=adj,lambda=lambda)
+    V=rcppHUpdate2(X=target,U=U,V=V)
+  
+  
+  
+  basis(model)<-U
+  coef(model)<- t(V)
+  return(model)
+}
+
+
+
+networkDistance2<-function(x,target,...){
+  d=rcppSim2(target,.basis(x),t(.coef(x)),adj,lambda);
+  print(d);
+  d;    
+}
+
+code='
+double rcppSim2(arma::mat& X,arma::mat& U,arma::mat& V,arma::mat& W,double lambda){
+
+ arma::mat D = arma::diagmat(arma::sum(W));
+ arma::mat L = arma::mat(D - W);
+
+ double fit = arma::as_scalar(arma::norm(X-U*V.t(),\"fro\")) + arma::as_scalar(lambda * arma::trace(U.t() * L * U));
+
+ return (fit);
+}
+'
+cppFunction(code=code, depends="RcppArmadillo")
+
+code='
+arma::mat rcppWUpdate2(arma::mat& X,arma::mat& U,arma::mat& V,arma::mat& W,double lambda){
+  arma::mat D = arma::diagmat(arma::sum(W));
+  U %= (X * V + lambda * W * U) / (U * V.t() * V + lambda * D * U);
+  return U;
+}
+'
+cppFunction(code=code, depends="RcppArmadillo")
+
+
+code='
+arma::mat rcppHUpdate2(arma::mat& X,arma::mat& U,arma::mat& V){
+
+V %= (X.t() * U) / (V * U.t() * U);  
+
+return V;
+}
+'
+cppFunction(code=code, depends="RcppArmadillo")
+
+
+setNMFMethod('NetNMF', objective=networkDistance2, Update=netNMF2, Stop="connectivity")
+lambda<-25
+adj2<-adj
+
+#run the netNMF with resampling - return the subgroup predictions
+runNMF<-function(dt.sampled,rank){
+
+  rowIndexes<-sample.int(n=nrow(dt.sampled),nrow(dt.sampled)*0.9)
+  colIndexes<-sample.int(n=ncol(dt.sampled),ncol(dt.sampled)*0.9)
+  
+  dt.sampled<-dt.sampled[rowIndexes,colIndexes]
+  
+  adj<<-adj2[rowIndexes,rowIndexes]
+  
+  results<-nmf(x=as.matrix(dt.sampled),method="NetNMF",rank=rank,nrun=1,.options="p1")
+  
+  group<-as.numeric(predict(results,what="columns"))
+  names(group)<-colIndexes
+  
+  group<-stack(group)
+    
+
+
+  return(groups)
+}
+groups<-runNMF(discoveryMatrix,2)
+
+
+
+
+```
+
+
+Standard NMF for comparison - much faster
+```{r, eval=FALSE, include=FALSE}
+
+runNMF<-function(dt,rank){
+
+  groups<-list()
+  
+  for ( run in 1:500) {
+  
+  
+    rowIndexes<-sample.int(n=nrow(dt),nrow(dt)*0.9)
+    colIndexes<-sample.int(n=ncol(dt),ncol(dt)*0.9)
+    
+    dt.sampled<-dt[rowIndexes,colIndexes]
+    
+    
+    results<-nmf(x=as.matrix(dt.sampled),method="lee",rank=rank,nrun=1,.options="p1")
+    
+    group<-as.numeric(predict(results,what="columns"))
+    names(group)<-colnames(dt.sampled)
+    
+    group<-stack(group)
+    
+    groups[[run]] <- group
+  
+  }
+  return(groups)
+}
+
+groups_2<-runNMF(discoveryMatrix,2)
+groups_2<-as.data.frame(rbindlist(groups_2))
+save(groups_2,file="data/Lee_rank2_200317.RData")
+
+groups_3<-runNMF(discoveryMatrix,3)
+groups_3<-as.data.frame(rbindlist(groups_3))
+save(groups_3,file="data/Lee_rank3_200317.RData")
+
+groups_4<-runNMF(discoveryMatrix,4)
+groups_4<-as.data.frame(rbindlist(groups_4))
+save(groups_4,file="data/Lee_rank4_200317.RData")
+
+
+```
+Make consensus matrices for the standard NMF
+```{r}
+
+#load all the runs from NMF.
+loadNMFRuns<-function(pred,k) {
+  
+  pred[,1]<-paste(pred[,1],rep(1:(dim(pred)[1]/39),each=39),sep="_")
+  C<- table(pred[,2])
+  V <- crossprod(table(pred[1:2]))
+  V <-sweep(V,MARGIN=2,C,`/`)
+  distMat<-as.dist(1-V)
+  clust<-hclust(distMat,"ave")
+  coph<-cophenetic(clust)
+  cophenetic<-round(cor(distMat,coph),3)
+  coph<-paste("coph=",round(cor(distMat,coph),3),sep="")
+  sil<-round(mean(silhouette(as.numeric(cutree(clust,k)),distMat)[,3]),3)
+  
+  
+  return(list(consensus=V,distance=distMat,dendro=cophenetic,coph=coph,clust=clust,sil=sil))
+  
+}
+
+load("data/Lee_rank2_200317.RData")
+load("data/Lee_rank3_200317.RData")
+load("data/Lee_rank4_200317.RData")
+
+NMF2.Lee<-loadNMFRuns(groups_2,2)
+NMF3.Lee<-loadNMFRuns(groups_3,3)
+NMF4.Lee<-loadNMFRuns(groups_4,4)
+
+sil.Lee<-c(NMF2.Lee$sil,NMF3.Lee$sil,NMF4.Lee$sil)
+
+load("data/NetNMF_R2_L25.RData")
+load("data/NetNMF_R3_L25.RData")
+load("data/NetNMF_R4_L25.RData")
+
+NMF2.Net<-loadNMFRuns(netNMF.2,2)
+NMF3.Net<-loadNMFRuns(netNMF.3,3)
+NMF4.Net<-loadNMFRuns(netNMF.4,4)
+
+#Make the mean siloutette plot
+sil.Net<-c(NMF2.Net$sil,NMF3.Net$sil,NMF4.Net$sil)
+sil<-data.frame(Method=c(rep("NetNMF",3),rep("NMF",3)),Rank=c(2:4,2:4),Silhouette=c(sil.Net,sil.Lee))
+
+
+meanSilPlot<-ggplot(sil,aes(x=Rank,y=Silhouette,group=Method))+geom_bar(aes(fill=Method),position = "dodge", stat="identity")+ ylab("Mean Silhouette Width")+  scale_fill_manual(values = c("black", "lightgrey"))+cowplot::theme_cowplot(font_size = 20)
+
+
+#individual silhouette scores
+siloutetteScores<-as.data.frame(silhouette(as.numeric(cutree(NMF2.Net$clust,2)),NMF2.Net$distance)[,c(1,3)])
+siloutetteScores<-siloutetteScores[ order(siloutetteScores$cluster,-siloutetteScores$sil_width),]
+siloutetteScores$cluster<-ifelse(siloutetteScores$cluster=="1","GroupA","GroupB")
+
+
+silPlot<-ggplot(siloutetteScores,aes(x=1:44,y=sil_width,group=as.factor(cluster)))+geom_bar(aes(fill=as.factor(cluster)),position = "dodge", stat="identity") + ylab("Silhouette Width") + scale_fill_manual(values = c("black","darkgrey")) +  cowplot::theme_cowplot(font_size = 20) + theme(axis.line.x=element_blank(),axis.title.x=element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank(),legend.title=element_blank())
+
+
+#make the consensus maps for all the netNMF and standard NMF runs
+NMF2.Net.map<-grid::grid.grabExpr(consensusmap(NMF2.Net$consensus,main="",labRow=NA,labCol=NA,col="royalblue4",treeheight = 0,fontsize = 10,legend=F),wrap=T)
+NMF3.Net.map<-grid::grid.grabExpr(consensusmap(NMF3.Net$consensus,main="",labRow=NA,labCol=NA,col="royalblue4",treeheight = 0,fontsize = 10,legend=F),wrap=T)
+NMF4.Net.map<-grid::grid.grabExpr(consensusmap(NMF4.Net$consensus,main="",labRow=NA,labCol=NA,col="royalblue4",treeheight = 0,fontsize = 10,legend=F),wrap=T)
+
+
+NMF2.Lee.map<-grid::grid.grabExpr(consensusmap(NMF2.Lee$consensus,main="k=2",labRow=NA,labCol=NA,col="royalblue4",treeheight = 0,fontsize = 10,legend=F),wrap=T)
+NMF3.Lee.map<-grid::grid.grabExpr(consensusmap(NMF3.Lee$consensus,main="k=3",labRow=NA,labCol=NA,col="royalblue4",treeheight = 0,fontsize = 10,legend=F),wrap=T)
+NMF4.Lee.map<-grid::grid.grabExpr(consensusmap(NMF4.Lee$consensus,main="k=4",labRow=NA,labCol=NA,col="royalblue4",treeheight = 0,fontsize = 10,legend=F),wrap=T)
+
+consensusMap<-gridExtra::arrangeGrob(NMF2.Net.map,NMF3.Net.map,NMF4.Net.map,NMF2.Lee.map,NMF3.Lee.map,NMF4.Lee.map,nrow=2,left="NetNMF                                    NMF")
+ 
+silPlots<-plot_grid(silPlot,meanSilPlot)
+
+Figure1<-ggdraw()+
+	draw_plot(pca.discovery.plot, x=0, y=.5, width=0.5, height=.5)+
+	draw_plot(consensusMap, x=.5, y=.5, width=0.4, height=.5) +
+  draw_plot(silPlot, x=0, y=0, width=0.5, height=0.5,scale=0.9) +
+  draw_plot(meanSilPlot, x=0.5, y=0, width=0.5, height=0.5,scale=0.9) +
+  draw_plot_label(label=LETTERS[1:4],x=c(0,0.5,0,0.5), y=c(1,1,0.5,0.5), fontface='bold',size = 25)
+
+save_plot("results/Figure1.png",Figure1,base_height = 8,base_width = 12,dpi=600)
+
+```
+
+
+Extract the subgroup predictions
+```{r}
+#remove the poorly clustered samples
+remove<-which(silhouette(as.numeric(cutree(NMF2.Net$clust,2)),NMF2.Net$distance)[,3]<0)
+
+#define the subgroups
+groups<-stack(cutree(NMF2.Net$clust,2)[-remove])
+groups<-groups[ order(groups$ind),]
+
+removeSampleNames<-stack(cutree(NMF2.Net$clust,2)[remove])$ind
+remove<-which(colnames(txi$abundance) %in% removeSampleNames)
+
+# make the subgroup vector
+subgroups<-rep("validation",70)
+controls<-c(grep("MRI",colnames(txi$counts)),grep("RJ",colnames(txi$counts)))
+subgroups[controls]<-"nonOA"
+subgroups[which(colnames(txi$counts) %in% groups[groups$values==1,2] )] <-"GroupA"
+subgroups[which(colnames(txi$counts) %in% groups[groups$values==2,2] )] <-"GroupB"
+
+```
+
+Subgroup patient stats
+```{r}
+#Statistics of the subgroups
+patientDetails<-read.csv("data/patientDetails_all_withMed.csv",stringsAsFactors = F)
+
+patientDetails<-patientDetails[ !duplicated(patientDetails$name),]
+patientDetails$Group<-subgroups
+patientDetails<-patientDetails[ !patientDetails$Group %in% c("validation","nonOA"),] 
+
+#make the drug columns
+patientDetails$painkiller<-ifelse(grepl(paste(c("aspirin","paracetamol","COCODAMOL","TRAMADOL"),collapse="|"),patientDetails$ANALGESICS.PREOP, ignore.case = T),"yes","no")
+
+patientDetails$nsaid<-ifelse(grepl(paste(c("IBUPROFEN","NAPROXEN"),collapse="|"),patientDetails$ANALGESICS.PREOP, ignore.case = T),"yes","no")
+
+patientDetails$statin<-ifelse(grepl(paste(c("statin"),collapse="|"),patientDetails$OTHER.MEDICATIONS, ignore.case = T),"yes","no")
+
+
+
+patientSex<-ggplot(patientDetails, aes ( x= Group, fill= Sex))+ geom_bar(position="fill")+scale_fill_manual(values = c("lightgrey", "darkgrey"))+ylab(label="Proportion")+xlab(label="Group") + theme_classic(base_size = 24) + scale_color_manual(values = "black") + theme(axis.title.x = element_blank())
+
+
+ggplot(patientDetails, aes ( x= Group, fill= painkiller))+ geom_bar(position="fill")+ylab(label="Proportion")+xlab(label="Group")  + theme_classic(base_size = 24)
+
+ggplot(patientDetails, aes ( x= Group, fill=statin))+ geom_bar(position="fill")+ylab(label="Proportion")+xlab(label="Group")+  theme_classic(base_size = 24)
+
+ggplot(patientDetails, aes ( x= Group, fill= nsaid))+ geom_bar(position="fill")+ylab(label="Proportion")+xlab(label="Group") + theme_classic(base_size = 24)
+
+
+patientAge<-ggplot(patientDetails, aes ( x= Group, y= Age,fill=Group))+ geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white")                                                                        )+ylab(label="Age")+xlab(label="Group") +  theme_classic(base_size = 24) + guides(fill=FALSE) +theme(axis.title.x = element_blank())
+
+
+patientBMI<- ggplot(patientDetails, aes ( x= Group, y= BMI,fill=Group))+ geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white")                                                                            )+ylab(label="BMI")+xlab(label="Group") +  theme_classic(base_size = 24) +theme(axis.title.x = element_blank()) +  guides(fill=FALSE)
+
+
+
+
+ggplot(patientDetails, aes ( x= Group, y= Preop.Oxford.KS..0.48.,fill=Group))+ geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white")                                                                            )+ylab(label="Preop.Oxford.KS")+theme(axis.title.x = element_blank()) + theme_classic(base_size=30) + guides(fill=FALSE)
+
+ggplot(patientDetails, aes ( x= Group, y= Preop.Pain.VAS..0.100.,fill=Group))+ geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white")                                                                            )+ylab(label="Preop.Pain.VAS")+xlab(label="Group") + theme_classic(base_size=30) + guides(fill=FALSE)
+
+ggplot(patientDetails, aes ( x= Group, y= KOOS.Pain..0.100.,fill=Group))+ geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white")                                                                            )+ylab(label="KOOS.Pain")+xlab(label="Group") + theme_classic(base_size=30) + guides(fill=FALSE)
+
+
+PatientMankin<-ggplot(patientDetails, aes ( x= Group, y= Modified.Mankin.Score ,fill=Group)) + geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white"))+ylab(label="Mankin Score")+xlab(label="Group") + theme_classic(base_size=24) + theme(axis.title.y = element_text(size = rel(1))) + guides(fill=FALSE) +theme(axis.title.x = element_blank())  +theme(axis.title.x = element_blank())
+
+PatientPreOpPainVAS<-ggplot(patientDetails, aes ( x= Group, y= Preop.Pain.VAS..0.100. ,fill=Group)) + geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white"))+ylab(label="Preop Pain (VAS)")+xlab(label="Group") + theme_classic(base_size=24) + theme(axis.title.y = element_text(size = rel(1))) + guides(fill=FALSE) +theme(axis.title.x = element_blank())  +theme(axis.title.x = element_blank())
+
+PatientKOOSPain<-ggplot(patientDetails, aes ( x= Group, y= KOOS.Pain..0.100. ,fill=Group)) + geom_boxplot()+scale_fill_manual(values = c("lightgrey", "white"))+ylab(label="KOOS Pain")+xlab(label="Group") + theme_classic(base_size=24) + theme(axis.title.y = element_text(size = rel(1))) + guides(fill=FALSE) +theme(axis.title.x = element_blank())  +theme(axis.title.x = element_blank())
+
+PatientStatsFigure<-ggdraw()+
+	draw_plot(patientAge, x=0, y=.66, width=0.5, height=.33,scale=0.9)+
+	draw_plot(patientSex, x=.5, y=.66, width=0.5, height=.33) +
+  draw_plot(patientBMI, x=0, y=0.33, width=0.5, height=0.33,scale=0.9) +
+  draw_plot(PatientMankin, x=0.5, y=0.33, width=0.5, height=0.33,scale=0.9) +
+  draw_plot(PatientPreOpPainVAS, x=0, y=0, width=0.5, height=0.33,scale=0.9) +
+  draw_plot(PatientKOOSPain, x=0.5, y=0, width=0.5, height=0.33,scale=0.9) +
+  draw_plot_label(label=LETTERS[1:6],x=c(0,0.5,0,0.5,0,0.5), y=c(1,1,0.66,0.66,0.33,0.33), fontface='bold',size = 25)
+
+save_plot("results/SupplFig2_patientStatistics.png",PatientStatsFigure,base_height = 8,base_width = 12,dpi=600)
+
+
+#test for association of the Groups with known covariants
+wilcox.test(patientDetails$Modified.Mankin.Score ~patientDetails$Group)
+wilcox.test(patientDetails$Age~patientDetails$Group)
+wilcox.test(patientDetails$BMI~patientDetails$Group)
+wilcox.test(patientDetails$Preop.Pain.VAS..0.100.~patientDetails$Group)
+prop.test(table(patientDetails$Sex,patientDetails$Group), correct=FALSE)
+```
+
+
+What genes are differentially expressed between the subgroups?
+
+```{r}
+# Differential expression analysis
+
+#add all the data rather than just the discovery cohort to improve the estimate of gene dispersion and correction for the batch effect in the model.
+
+batches<-batches[-remove]
+subgroups<-subgroups[-remove]
+
+txi$abundance<-txi$abundance[,-remove]
+txi$counts<-txi$counts[,-remove]
+txi$length<-txi$length[,-remove]
+
+#DESeq2 differential expression analysis
+colData<-data.frame(batches=as.factor(batches),subgroups=subgroups)
+dds<-DESeqDataSetFromTximport(txi,colData,~batches+subgroups)
+dds<-DESeq(dds)
+
+
+#make tables of the differentially expressed genes with gene symbol IDs
+GroupAvsnonOA<-as.data.frame(results(dds,alpha=0.1,contrast=c("subgroups","GroupA","nonOA")))
+GroupAvsnonOA<-merge(GroupAvsnonOA,ens2gene,by.x="row.names",by.y="gene_id")
+GroupAvsnonOA<-GroupAvsnonOA[order(GroupAvsnonOA$padj,decreasing=F),]
+GroupAvsnonOAsig<-na.omit(GroupAvsnonOA[ abs(GroupAvsnonOA$log2FoldChange)>=log2(1.5) & GroupAvsnonOA$padj<=0.1,])
+
+GroupBvsnonOA<-as.data.frame(results(dds,alpha=0.1,contrast=c("subgroups","GroupB","nonOA")))
+GroupBvsnonOA<-merge(GroupBvsnonOA,ens2gene,by.x="row.names",by.y="gene_id")
+GroupBvsnonOA<-GroupBvsnonOA[order(GroupBvsnonOA$padj,decreasing=F),]
+GroupBvsnonOAsig<-na.omit(GroupBvsnonOA[ abs(GroupBvsnonOA$log2FoldChange)>=log2(1.5) &GroupBvsnonOA$padj<=0.1,])
+
+GroupBvsGroupA<-as.data.frame(results(dds,alpha=0.1,contrast=c("subgroups","GroupB","GroupA")))
+GroupBvsGroupA<-merge(GroupBvsGroupA,ens2gene,by.x="row.names",by.y="gene_id")
+GroupBvsGroupA<-GroupBvsGroupA[order(GroupBvsGroupA$padj,decreasing=F),]
+GroupBvsGroupAsig<-na.omit(GroupBvsGroupA[ abs(GroupBvsGroupA$log2FoldChange)>=log2(1.5) & GroupBvsGroupA$padj<=0.1,])
+
+
+#merge as one big dataframe for comparison
+differentialExpression<-merge(GroupAvsnonOA,GroupBvsnonOA,by="Row.names",suffixes=c("AvsnonOA","BvsnonOA"))
+differentialExpression<-merge(differentialExpression,GroupBvsGroupA,by="Row.names")
+
+differentialExpression<-differentialExpression[,c(1,8,3,7,10,14,17,21)]
+counts<-counts(dds,normalized=T)
+differentialExpression$counts.nonOA<-apply(counts[,-grep("^SH",colnames(counts))],1,mean)
+differentialExpression$counts.GroupA<-apply(counts[,colnames(counts) %in% as.character(groups[groups$values==1,2])],1,mean)
+differentialExpression$counts.GroupB<-apply(counts[,colnames(counts) %in% as.character(groups[groups$values==2,2])],1,mean)
+
+write.table(differentialExpression,file="results/DifferentialExpressionAnalysis.txt",col.names=T,row.names=F,sep="\t",quote=F)
+
+
+```
+
+What genes are differentially expressed in all the discovery set OA vs nonOA ?
+
+```{r}
+
+Disease<-subgroups
+Disease[ Disease %in% c("GroupA","GroupB")]<-"OA"
+
+
+#DESeq2 differential expression analysis
+colData<-data.frame(batches=as.factor(batches),Disease)
+dds<-DESeqDataSetFromTximport(txi,colData,~batches+Disease)
+dds<-DESeq(dds)
+
+
+#make tables of the differentially expressed genes with gene symbol IDs
+OAvsnonOA<-as.data.frame(results(dds,alpha=0.1,contrast=c("Disease","OA","nonOA")))
+OAvsnonOA<-merge(OAvsnonOA,ens2gene,by.x="row.names",by.y="gene_id")
+OAvsnonOA<-OAvsnonOA[order(OAvsnonOA$padj,decreasing=F),]
+OAvsnonOAsig<-na.omit(OAvsnonOA[ abs(OAvsnonOA$log2FoldChange)>=log2(1.5) & OAvsnonOA$padj<=0.1,])
+
+write.table(OAvsnonOAsig,file="results/Discovery_OAvsNonOA_Suppl_Table1.txt",col.names=T,row.names=F,sep="\t",quote=F)
+```
+Compare to the DEGs involved in  skeletal development and ECM formation from Karlsson 2010 paper
+```{r}
+#load the degs
+Karlsson<-read.delim("data/Karlsson_OA_DEGs.text",header=F)
+
+Karlsson<-OAvsnonOAsig[ OAvsnonOAsig$gene_name %in% Karlsson$V1,]
+
+
+```
+
+
+
+Use pamr to inform the selection of genes for the qPCR panel.
+```{r eval=F}
+#find a gene panel of genes
+discoveryMatrix.pamr<-discoveryMatrix[,!colnames(discoveryMatrix) %in% removeSampleNames]
+
+discoveryMatrix.pamr<-discoveryMatrix.pamr[ rowMedians(as.matrix(discoveryMatrix.pamr)) >=(log2(5000)),]
+
+results<-pamr.train(data=list(x=as.matrix(discoveryMatrix.pamr),y=groups$values),n.threshold=200)
+p<-pamr.cv(fit=results,data=list(x=as.matrix(discoveryMatrix.pamr),y=groups))
+genes<-pamr.listgenes(results,data=list(x=as.matrix(discoveryMatrix.pamr),y=groups,genenames=rownames(discoveryMatrix.pamr),geneid=rownames(discoveryMatrix.pamr)),threshold=4.5,genenames=T)
+```
+
+Set up the qPCR data
+```{r }
+qPCR<-read.delim("data/qPCRData.txt")
+
+qPCR.validation<-qPCR[  na.omit(match(colnames(validationMatrix),qPCR$Sample)),]
+
+#reorder the data based on the colnames
+qPCR<-qPCR[  na.omit(match(as.character(groups$ind),qPCR$Sample)),]
+qPCR$subgroup<-groups$values[-1]
+qPCR<-qPCR[ order(qPCR$subgroup),]
+qPCR$subgroup<-as.factor(qPCR$subgroup)
+levels(qPCR$subgroup)<-c("subgroupA","subgroupB")
+
+
+
+```
+Boxplot of the RNA-seq and the qPCR classifer genes
+
+```{r}
+discoveryMatrix.10genes<-as.data.frame(t(discoveryMatrix[ rownames(discoveryMatrix) %in% colnames(qPCR)[c(-1,-12)],]))
+discoveryMatrix.10genes<-discoveryMatrix.10genes[ rownames(discoveryMatrix.10genes) %in% groups$ind,]
+discoveryMatrix.10genes$group<-groups$values
+discoveryMatrix.10genes$patient<-rownames(discoveryMatrix.10genes)
+a<-discoveryMatrix.10genes %>% gather(key, value, -c(patient,group))
+
+
+RNASeq10GeneBoxplot<-ggplot(a,aes(x=key,y=value,fill=as.factor(group)))+geom_boxplot() + facet_wrap(~key,scales="free") + theme_classic()+theme(axis.text.x=element_blank(),axis.ticks.x=element_blank(),axis.text.y=element_text(size=16),axis.title=element_text(size=22),strip.text = element_text(size=12),legend.title = element_text(size=22),legend.text = element_text(size=22))+labs(y="Log2 RNASeq Counts",x="Gene") +  scale_fill_manual(name="Group",labels=c("A", "B"),values=c("white","grey")) + cowplot::theme_cowplot() + theme(axis.text.x=element_blank(),axis.ticks.x=element_blank())
+
+a<- qPCR %>% gather(key, value, -c(Sample,subgroup))
+
+
+qPCR10GeneBoxplot<-ggplot(a,aes(x=key,y=value,fill=as.factor(subgroup)))+geom_boxplot() + facet_wrap(~key,scales="free") + theme_classic()+theme(axis.text.x=element_blank(),axis.ticks.x=element_blank(),axis.text.y=element_text(size=16),axis.title=element_text(size=22),strip.text = element_text(size=12),legend.title = element_text(size=22),legend.text = element_text(size=22))+labs(y="qPCR Delta-CT",x="Gene") +  scale_fill_manual(name="Group",labels=c("A", "B"),values=c("white","grey"))+ cowplot::theme_cowplot() + theme(axis.text.x=element_blank(),axis.ticks.x=element_blank()) 
+
+```
+
+Classifer based on the qPCR data
+
+```{r eval=FALSE}
+
+#SVM Classifier based on the qPCR data
+set.seed(42)
+svmTuneGrid <- expand.grid(C = 2^seq(-8,4,0.1))
+
+mod.qPCR <- train(subgroup ~ ., data = qPCR[,-1,],
+                  method = "svmLinear",
+                  metric = "ROC",
+                  tuneGrid = svmTuneGrid,trControl = trainControl(method = "repeatedcv",
+                                                                  repeats = 500,number=5,
+                                                                  classProbs = TRUE,savePredictions=T,
+                                                                  summaryFunction = twoClassSummary))
+getTrainPerf(mod.qPCR)
+predictions<-predict.train(mod.qPCR,newdata=qPCR[,c(-1,-12)],type="raw")
+confusionMatrix(predictions,reference=qPCR[,"subgroup"])
+save(mod.qPCR,file="results/qPCR.SVM.trained.RData")
+```
+
+comparison of the rna-seq and qPCR for the classifer genes
+
+```{r}
+t.tests<-c()
+for (i in 2:(ncol(qPCR)-1)){
+  t.tests<-c(t.tests,wilcox.test(qPCR[,i]~qPCR$subgroup)$p.value)
+}
+qPCR.Mean<-qPCR[,-1] %>% group_by(subgroup) %>%  summarise_each(funs(mean))
+qPCR.FC<-qPCR.Mean[2,-1]/qPCR.Mean[1,-1]
+classiferGenes<-c("IGFBP7","TAGLN2","COL1A1","AQP1","GPNMB","CTSZ","CD74","S100A4","CPAMD8","S100A1")
+qPCR.FC<-qPCR.FC[classiferGenes]
+qPCR.FC[,c("CPAMD8","S100A1")]<- -1/qPCR.FC[,c("CPAMD8","S100A1")]
+
+classiferGenes<-c("IGFBP7","TAGLN2","COL1A1","AQP1","GPNMB","CTSZ","CD74","S100A4","CPAMD8","S100A1")
+RNASeq.FC<-logratio2foldchange(GroupBvsGroupA[na.omit(match(classiferGenes,GroupBvsGroupA$gene_name)),"log2FoldChange"])
+RNASeq.pvalue<-GroupBvsGroupA[na.omit(match(classiferGenes,GroupBvsGroupA$gene_name)),"padj"]
+
+```
+
+Remove the poor fitted samples from the discoveryMatrix
+```{r}
+discoveryMatrix<-discoveryMatrix[, colnames(discoveryMatrix) %in% groups$ind]
+```
+
+RNA-Seq based classifer
+
+```{r eval=F}
+
+#Make a RNA-Seq classifier using a SVM
+
+#This will take a while!
+set.seed(42)
+svmTuneGrid <- expand.grid(C = 2^(-8:-5))
+mod0 <- train(y=as.factor(make.names(groups$values)),x=t(discoveryMatrix),
+              method = "svmLinear",
+              metric = "ROC",
+              tuneGrid = svmTuneGrid,trControl = trainControl(method = "repeatedcv",
+                                                              repeats = 100,number=5,
+                                                              classProbs = TRUE,savePredictions=T,                                                          
+                                                              summaryFunction = twoClassSummary))
+getTrainPerf(mod0)
+predictions<-predict.train(mod0,newdata=t(discoveryMatrix),type="raw")
+confusionMatrix(predictions,reference=make.names(groups$values))
+save(mod0,file="results/RNASeq.SVM.trained.RData")
+```
+
+Compare the predictions of the classifier for the validation cohort
+```{r}
+load("results/RNASeq.SVM.trained.RData")
+load("results/qPCR.SVM.trained.RData")
+
+#use the RNA-seq classifier results as the truth
+predictions.rnaseq.validation<-as.data.frame(predict(mod0,t(validationMatrix),type="raw"))
+rownames(predictions.rnaseq.validation)<-colnames(validationMatrix)
+predictions.qPCR.validation<-predict(mod.qPCR,qPCR.validation[,c(-1,-12)],type="prob")
+rownames(predictions.qPCR.validation)<-qPCR.validation$Sample
+predictions.merged<-merge(predictions.qPCR.validation,predictions.rnaseq.validation,by="row.names")
+
+colnames(predictions.merged)[4]<-"subgroup"
+
+roc(predictions.merged$subgroup,
+         predictions.merged$subgroupA)
+
+plot.roc(predictions.merged$subgroup,
+         predictions.merged$subgroupA)
+```
+
+
+qRT-PCR 10 gene boxplot validation cohort based on RNA-seq classifier
+
+```{r}
+qPCR.validation$subgroup<-as.character(predict(mod0,t(validationMatrix),type="raw"))
+
+a<- qPCR.validation %>% gather(key, value, -c(Sample,subgroup))
+
+
+validatonQPCR10GeneBoxplot<-ggplot(a,aes(x=key,y=value,fill=as.factor(subgroup)))+geom_boxplot() + facet_wrap(~key,scales="free") + theme_classic()+theme(axis.text.x=element_blank(),axis.ticks.x=element_blank(),axis.text.y=element_text(size=16),axis.title=element_text(size=22),strip.text = element_text(size=12),legend.title = element_text(size=22),legend.text = element_text(size=22))+labs(y="qPCR Delta-CT",x="Gene") +  scale_fill_manual(name="Group",labels=c("A", "B"),values=c("white","grey"))+ cowplot::theme_cowplot() + theme(axis.text.x=element_blank(),axis.ticks.x=element_blank())
+
+wilcox.tests<-c()
+for (i in 2:(ncol(qPCR.validation)-1)){
+  wilcox.tests<-c(t.tests,wilcox.test(qPCR.validation[,i]~qPCR.validation$subgroup)$p.value)
+}
+qPCR.validation.Mean<-qPCR.validation[,-1] %>% group_by(subgroup) %>%  summarise_each(funs(mean))
+qPCR.validation.FC<-qPCR.validation.Mean[2,-1]/qPCR.validation.Mean[1,-1]
+classiferGenes<-c("IGFBP7","TAGLN2","COL1A1","AQP1","GPNMB","CTSZ","CD74","S100A4","CPAMD8","S100A1")
+qPCR.validation.FC<-qPCR.validation.FC[classiferGenes]
+qPCR.validation.FC[,c("CPAMD8","S100A1")]<- -1/qPCR.validation.FC[,c("CPAMD8","S100A1")]
+
+
+SupplFigure3<- plot_grid(RNASeq10GeneBoxplot,qPCR10GeneBoxplot,validatonQPCR10GeneBoxplot,labels = "AUTO",label_size = 25,label_fontface = "bold")
+
+
+save_plot("results/SupplFigure3.png",SupplFigure3,base_height = 8,base_width = 12,dpi=600)
+```
+
+
+Combined analysis of the discovery and validation cohort
+```{r}
+#load counts matrix from txi-import using kallisto abundance matrices
+load("data/txi.RData")
+
+patientDetails<-read.csv("data/patientDetails_all_withMed.csv",stringsAsFactors = F)
+batches<-patientDetails[!duplicated(patientDetails$name),"batch"]
+
+
+#match the orders
+txi$counts <- txi$counts[ ,match(unique(as.character(patientDetails$name)),colnames(txi$counts))]
+txi$abundance <- txi$abundance[ ,match(unique(as.character(patientDetails$name)),colnames(txi$abundance))]
+txi$length <- txi$length[ ,match(unique(as.character(patientDetails$name)),colnames(txi$length))]
+
+predictions<-as.character(predict(mod0,t(cbind(discoveryMatrix,validationMatrix)),type="raw"))
+predictions[predictions=="X1"]<-"A"
+predictions[predictions=="X2"]<-"B"
+names(predictions)<-c(colnames(discoveryMatrix),colnames(validationMatrix))
+
+#make the subgroup vector
+subgroups<-rep("nonInc",70)
+controls<-c(grep("MRI",colnames(txi$counts)),grep("RJ",colnames(txi$counts)))
+subgroups[controls]<-"nonOA"
+subgroups[which(colnames(txi$counts) %in% names(predictions[ predictions=="A"] ))] <-"subgroupA"
+subgroups[which(colnames(txi$counts) %in% names(predictions[ predictions=="B"] ))] <-"subgroupB"
+
+colData<-data.frame(batches=as.factor(batches),subgroups=subgroups)
+dds<-DESeqDataSetFromTximport(txi,colData,~batches+subgroups)
+dds<-DESeq(dds)
+
+
+#make tables of the differentially expressed genes with gene symbol IDs
+subgroupAvsnonOA<-as.data.frame(results(dds,alpha=0.1,contrast=c("subgroups","subgroupA","nonOA")))
+subgroupAvsnonOA<-merge(subgroupAvsnonOA,ens2gene,by.x="row.names",by.y="gene_id")
+subgroupAvsnonOA<-subgroupAvsnonOA[order(subgroupAvsnonOA$padj,decreasing=F),]
+subgroupAvsnonOAsig<-na.omit(subgroupAvsnonOA[ abs(subgroupAvsnonOA$log2FoldChange)>=log2(1.5) & subgroupAvsnonOA$padj<=0.1,])
+
+subgroupBvsnonOA<-as.data.frame(results(dds,alpha=0.1,contrast=c("subgroups","subgroupB","nonOA")))
+subgroupBvsnonOA<-merge(subgroupBvsnonOA,ens2gene,by.x="row.names",by.y="gene_id")
+subgroupBvsnonOA<-subgroupBvsnonOA[order(subgroupBvsnonOA$padj,decreasing=F),]
+subgroupBvsnonOAsig<-na.omit(subgroupBvsnonOA[ abs(subgroupBvsnonOA$log2FoldChange)>=log2(1.5) &subgroupBvsnonOA$padj<=0.1,])
+
+subgroupBvssubgroupA<-as.data.frame(results(dds,alpha=0.1,contrast=c("subgroups","subgroupB","subgroupA")))
+subgroupBvssubgroupA<-merge(subgroupBvssubgroupA,ens2gene,by.x="row.names",by.y="gene_id")
+subgroupBvssubgroupA<-subgroupBvssubgroupA[order(subgroupBvssubgroupA$padj,decreasing=F),]
+subgroupBvssubgroupAsig<-na.omit(subgroupBvssubgroupA[ abs(subgroupBvssubgroupA$log2FoldChange)>=log2(1.5) & subgroupBvssubgroupA$padj<=0.1,])
+
+#merge as one big dataframe for comparison
+differentialExpression<-merge(subgroupAvsnonOA,subgroupBvsnonOA,by="Row.names",suffixes=c("AvsnonOA","BvsnonOA"))
+differentialExpression<-merge(differentialExpression,subgroupBvssubgroupA,by="Row.names")
+
+differentialExpression<-differentialExpression[,c(1,8,3,7,10,14,17,21)]
+counts<-counts(dds,normalized=T)
+differentialExpression$counts.nonOA<-apply(counts[,-grep("^SH",colnames(counts))],1,mean)
+differentialExpression$counts.subgroupA<-apply(counts[,colnames(counts) %in% as.character(groups[groups$values==1,2])],1,mean)
+differentialExpression$counts.subgroupB<-apply(counts[,colnames(counts) %in% as.character(groups[groups$values==2,2])],1,mean)
+
+write.table(differentialExpression,file="results/SupplTable3_DifferentialExpressionAnalysisAll.txt",col.names=T,row.names=F,sep="\t",quote=F)
+
+```
+
+
+All OA (discovery and validation) vs nonOA
+
+```{r}
+Disease<-subgroups
+Disease[ Disease %in% c("subgroupA","subgroupB")]<-"OA"
+
+
+#DESeq2 differential expression analysis
+colData<-data.frame(batches=as.factor(batches),Disease)
+dds<-DESeqDataSetFromTximport(txi,colData,~batches+Disease)
+dds<-DESeq(dds)
+
+
+#make tables of the differentially expressed genes with gene symbol IDs
+OAvsnonOA<-as.data.frame(results(dds,alpha=0.1,contrast=c("Disease","OA","nonOA")))
+OAvsnonOA<-merge(OAvsnonOA,ens2gene,by.x="row.names",by.y="gene_id")
+OAvsnonOA<-OAvsnonOA[order(OAvsnonOA$padj,decreasing=F),]
+OAvsnonOAsig<-na.omit(OAvsnonOA[ abs(OAvsnonOA$log2FoldChange)>=log2(1.5) & OAvsnonOA$padj<=0.1,])
+
+write.table(OAvsnonOAsig,file="results/Suppl_Table2_AllOAvsNonOA_DifferentialExpressionAnalysis.txt",col.names=T,row.names=F,sep="\t",quote=F)
+```
+venn of AllOAvsnonOA and the individual subgroups vs nonOA
+
+```{r}
+venn<-list(subgroupBvsnonOA=subgroupBvsnonOAsig$Row.names,subgroupAvsnonOA=subgroupAvsnonOAsig$Row.names,OAvsnonOA=OAvsnonOAsig$Row.names)
+venn.diagram(venn,filename = "results/All_DEGs_Venn.png",resolution = 600,imagetype = "png",width = 10,height=10,units = "in",cex=4,log=F)
+
+```
+
+
+Comparison to the previous methylation and expression based knee cartilage OA study
+
+```{r}
+
+#list of 47 genes showing inverse relationship between methlation and expression cohorts
+methylListUp<-c("CCL28","IL16","DDR2","DCC","GPR75","AMT","DDAH1","SLC44A2","PLSCR4","CRIM1","CYGB","RHOJ","ABCA5","PLA2R1","ZNF134")
+
+methylListDown<-c("CD28","FCGR2B","FCER1A","LCP2","KYNU","MX2","HLA-DPB1","LCP1","LST1","NCF2","TREM1","IGSF6","NCF4","LILRB5","CD86","PLEK","SELPLG","CD33","PECAM1","SIGLEC10","ITGAX","ITGAM","CD84","FERMT3","GNA15","MARCO","LAPTM5","CYTIP","KCNMB1","MSR1","CTSZ","NCKAP1L")
+
+
+methylComparison<-subgroupBvssubgroupA[ subgroupBvssubgroupA$gene_name %in% c(methylListUp,methylListDown),]
+write.table(methylComparison,file="results/methylComparison.txt",col.names=T,row.names=T,sep="\t",quote=F)
+
+
+overlap<-length(unique(subgroupBvssubgroupAsig[ subgroupBvssubgroupAsig$gene_name %in% methylComparison$gene_name,"gene_name"]))
+total<-nrow(subgroupBvssubgroupA)
+
+overlapProb<-1 - phyper(overlap - 1, nrow(na.omit(subgroupBvssubgroupAsig)), total - nrow(na.omit(subgroupBvssubgroupAsig)), 47)
+
+```
+Focus on just the 9 genes used for their qPCR validation
+```{r}
+ methylComparison<-subgroupBvssubgroupA[ subgroupBvssubgroupA$gene_name %in% c("LAPTM5","CD28","FCGR2B","ITGAM","PLEK","LCP2","GNA15","KYNU","LY96"),]
+methylComparison
+```
+
+
+Boxplot of the chosen 9 genes from their study
+```{r}
+#Examine the list of their genes that are significant in ours
+rownames(correctedMatrix.complete)<-correctedMatrix.complete$gene_name
+correctedMatrix.complete<-correctedMatrix.complete[,c(-1,-72,-73)]
+
+
+correctedMatrix.complete.9genes<-as.data.frame(t(correctedMatrix.complete[ rownames(correctedMatrix.complete) %in% c("LAPTM5","CD28","FCGR2B","ITGAM","PLEK","LCP2","GNA15","KYNU","LY96"),]))
+correctedMatrix.complete.9genes<-correctedMatrix.complete.9genes[ rownames(correctedMatrix.complete.9genes) %in% groups$ind,]
+correctedMatrix.complete.9genes$group<-groups$values
+correctedMatrix.complete.9genes$patient<-rownames(correctedMatrix.complete.9genes)
+a<-correctedMatrix.complete.9genes %>% gather(key, value, -c(patient,group))
+
+
+Methyl9GeneBoxplot<-ggplot(a,aes(x=key,y=value,fill=as.factor(group)))+geom_boxplot() + facet_wrap(~key,scales="free") + theme_classic()+theme(axis.text.y=element_text(size=16),axis.title=element_text(size=22),strip.text = element_text(size=20),legend.title = element_text(size=22),legend.text = element_text(size=22))+labs(y="Log2 RNASeq Counts",x="Gene") +  scale_fill_manual(name="Group",labels=c("A", "B"),values=c("darkgrey","lightgrey")) + cowplot::theme_cowplot() + theme(axis.text.x=element_blank(),axis.ticks.x=element_blank())
+
+ggsave("results/Methyl9GeneBoxplot.png")
+
+```
+Biomarkers from proteomics papers
+```{r}
+#Secreted differntially expressed genes between the subgroups
+
+#filter
+BvsAsig<-na.omit(differentialExpression[ abs(differentialExpression$log2FoldChange)>=log2(1.3) &differentialExpression$padj<=0.1,])
+
+
+
+#load secretion data
+secretionGenes <- read.delim("data/Secretome/uniprot-locations%3A%28location%3A-Secreted+%5BSL-0243%5D-%29.tab")
+
+#filter the DEGs by the secretion genes
+BvsAsig$Uniprotsecreted<-ifelse(BvsAsig$gene_nameAvsnonOA %in% secretionGenes$Gene.names...primary..,"yes","no")
+
+#Gobezie et al.
+Gobezie_17407561 <- read.delim("data/Secretome/Gobezie_17407561.txt")
+BvsAsig$Gobezie_17407561<-ifelse(BvsAsig$gene_nameAvsnonOA %in% Gobezie_17407561$To,"yes","no")
+
+Balakrishnan_24533825 <- read.csv("data/Secretome/Balakrishnan.csv")
+BvsAsig$Balakrishnan_24533825<-ifelse(BvsAsig$gene_nameAvsnonOA %in% Balakrishnan_24533825$Gene.symbol,"yes","no")
+
+Balakrishnan_24393543<- read.csv("data/Secretome/Balakrishnan_24393543.csv")
+BvsAsig$Balakrishnan_24393543<-ifelse(BvsAsig$gene_nameAvsnonOA %in% Balakrishnan_24393543$Gene.symbol,"yes","no")
+
+Mateos_22245418 <- read.delim("data/Secretome/Mateos_22245418.txt")
+BvsAsig$Mateos_22245418<-ifelse(BvsAsig$gene_nameAvsnonOA %in% Mateos_22245418$To,"yes","no")
+
+Kamphorst_17929855 <- read.delim("data/Secretome/Kamphorst_17929855.txt")
+BvsAsig$Kamphorst_17929855<-ifelse(BvsAsig$gene_nameAvsnonOA %in% toupper(Kamphorst_17929855$To),"yes","no")
+
+
+Sohn_22225630 <- read.delim("data/Secretome/Sohn_22225630.txt")
+BvsAsig$Sohn_22225630<-ifelse(BvsAsig$gene_nameAvsnonOA %in% Sohn_22225630$To,"yes","no")
+
+Ritter_23400684 <- read.csv("data/Secretome/Ritter_23400684.csv")
+BvsAsig$Ritter_23400684<-ifelse(BvsAsig$gene_nameAvsnonOA %in% Ritter_23400684$Gene.name,"yes","no")
+
+Peffer_24132152 <- read.delim("data/Secretome/Peffer_24132152.txt")
+BvsAsig$Peffer_24132152<-ifelse(BvsAsig$gene_nameAvsnonOA %in%Peffer_24132152$x,"yes","no")
+
+Lourido_25383958<- read.delim("data/Secretome/Lourido_25383958.txt")
+
+BvsAsig$Lourido_25383958<-ifelse(BvsAsig$gene_nameAvsnonOA %in%Lourido_25383958$x ,"yes","no")
+
+BvsAsig$NumSynovialFluid<-apply(BvsAsig,1,function(x) sum(x[13:19]=="yes"))
+BvsAsig$NumExplantSecretome<-apply(BvsAsig,1,function(x) sum(x[20:21]=="yes"))
+
+colnames(BvsAsig)[1:2]<-c("EnsemblID","Gene_Name")
+colnames(BvsAsig)[7:8]<-paste0(colnames(BvsAsig)[7:8],"BvsA")
+
+
+BvsAsigfiltered<-BvsAsig[ BvsAsig$NumSynovialFluid>0 & BvsAsig$NumExplantSecretome>0 & abs(BvsAsig$log2FoldChangeBvsA)>=log2(1.5),]
+BvsAsigfiltered<-BvsAsigfiltered[ order(BvsAsigfiltered$counts.subgroupB,decreasing = T),]
+
+write.xlsx(BvsAsigfiltered,file="results/BvsA_biomarkers.xlsx", sheetName="Filtered_BvsA_Biomarkers", row.names=FALSE)
+write.xlsx(BvsAsig,file="results/BvsA_biomarkers.xlsx", sheetName="All_BvsA_Biomarkers", row.names=FALSE,append = T)
+```
+
+
+
+
+
+
+Reactome enrichment
+```{r}
+load("data/geneLengths.RData")
+subgroupAvsnonOAPathways<-getEnrichedReactomePathways(subgroupAvsnonOA,subgroupAvsnonOAsig,geneLengths)
+subgroupBvsnonOAPathways<-getEnrichedReactomePathways(subgroupBvsnonOA,subgroupBvsnonOAsig,geneLengths)
+subgroupBvssubgroupAPathways<-getEnrichedReactomePathways(subgroupBvssubgroupA,subgroupBvssubgroupAsig,geneLengths)
+
+write.xlsx(subgroupAvsnonOAPathways, file="results/reactomePathways.xlsx", sheetName="subgroupAvsnonOA",row.names = F)
+write.xlsx(subgroupBvsnonOAPathways, file="results/reactomePathways.xlsx", sheetName="subgroupBvsnonOA", append=TRUE,row.names = F)
+write.xlsx(subgroupBvssubgroupAPathways, file="results/reactomePathways.xlsx", sheetName="subgroupBvssubgroupA", append=TRUE,row.names = F)
+
+```
+
+

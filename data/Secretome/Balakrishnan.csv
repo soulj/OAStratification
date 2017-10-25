@@ -1,0 +1,685 @@
+Protein accession,Gene symbol,Protein description,Molecular function,ΣCoverage,Σ# Unique peptides,MW [kDa],Σ# PSMs,#AA's,PSMs/AAs,
+gi21071030,A1BG,Alpha-1-B glycoprotein,Molecular function unknown,61.21,22,54.2,1116,495,#VALUE!,#VALUE!
+gi66932947,A2M,Alpha-2-macroglobulin,Protease inhibitor activity,77.95,98,163.2,13647,1474,#VALUE!,#VALUE!
+gi339895787,ABCB9,"ATP-binding cassette, sub-family B (MDR/TAP),member 9",Auxiliary transport protein activity,1.03,1,75.2,9,681,#VALUE!,#VALUE!
+gi33667044,ABI3BP,"ABI gene family, member 3 (NESH) binding protein",Molecular function unknown,16,12,118.6,47,1075,#VALUE!,#VALUE!
+gi209862778,ABL2,"v-abl Abelson murine leukemia viral oncogene homolog 2 (arg, Abelson-related gene)",Protein tyrosine kinase activity,4.06,1,60.8,1,542,#VALUE!,#VALUE!
+gi256017257,ACAN,Aggrecan 1 isoform 2,Extracellular matrix structural constituent,9.01,4,261.2,276,2530,#VALUE!,#VALUE!
+gi256017259,ACAN,Aggrecan 1 isoform 1,Extracellular matrix structural constituent,8.64,1,250.2,251,2431,#VALUE!,#VALUE!
+gi4501881,ACTA1,"Actin, alpha 1, skeletal muscle",Structural molecule activity,31.83,1,42,109,377,#VALUE!,#VALUE!
+gi4501885,ACTB,"Actin, beta",Structural constituent of cytoskeleton,70.67,1,41.7,254,375,#VALUE!,#VALUE!
+gi63055057,ACTBL2,"Actin, beta-like 2",Molecular function unknown,16.22,1,42,34,376,#VALUE!,#VALUE!
+gi316659409,ACTG1,"Actin, gamma 1",Structural constituent of cytoskeleton,70.67,1,41.8,253,375,#VALUE!,#VALUE!
+gi223671930,ADAMDEC1,"ADAM-like, decysin 1",Metallopeptidase activity,2.3,1,43.5,1,391,#VALUE!,#VALUE!
+gi56788359,ADAMTSL4,ADAMTS-like 4,Protein binding,2.28,2,95.1,2,877,#VALUE!,#VALUE!
+gi4757760,ADIPOQ,"Adiponectin, C1Q and collagen domain containing",Molecular function unknown,31.56,5,26.4,43,244,#VALUE!,#VALUE!
+gi53692189,AEBP1,AE binding protein 1,Transcription regulator activity,1.3,1,130.8,1,1158,#VALUE!,#VALUE!
+gi4501987,AFM,Afamin,Structural molecule activity,59.93,41,69,557,599,#VALUE!,#VALUE!
+gi4557287,AGT,"Angiotensinogen (serine (or cysteine) proteinase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 8)",Peptide hormone,52.16,20,53.1,512,485,#VALUE!,#VALUE!
+gi156523970,AHSG,Alpha-2-HS-glycoprotein,Defense/immunity protein activity,56.95,21,39.3,1427,367,#VALUE!,#VALUE!
+gi21493045,AKAP6,A kinase (PRKA) anchor protein 6,Cytoskeletal anchoring activity,0.3,1,256.6,1,2319,#VALUE!,#VALUE!
+gi24497577,AKR1A1,"Aldo-keto reductase family 1, member A1 (aldehyde reductase)",Oxidoreductase activity,4.31,1,36.5,1,325,#VALUE!,#VALUE!
+gi4502027,ALB,Albumin,Transporter activity,78.98,48,69.3,1895,609,#VALUE!,#VALUE!
+gi343168772,ALCAM,Activated leukocyte cell adhesion molecule,Cell adhesion molecule activity,1.8,1,61.9,1,555,#VALUE!,#VALUE!
+gi4557305,ALDOA,"Aldolase A, fructose-bisphosphate",Lyase activity,37.91,9,39.4,23,364,#VALUE!,#VALUE!
+gi40354205,ALDOB,"Aldolase B, fructose-bisphosphate",Lyase activity,9.07,2,39.4,5,364,#VALUE!,#VALUE!
+gi110349786,ALMS1,Alstrom syndrome 1,Molecular function unknown,0.34,1,460.9,2,4169,#VALUE!,#VALUE!
+gi4502067,AMBP,Alpha-1-microglobulin/bikunin precursor,Defense/immunity protein activity,54.26,17,39,552,352,#VALUE!,#VALUE!
+gi56549662,AMY1B,"Amylase, alpha 1B; salivary",Amylase activity,5.28,2,57.7,2,511,#VALUE!,#VALUE!
+gi4557313,ANG,"Angiogenin, ribonuclease, RNase A family, 5",Ribonuclease activity,10.88,1,16.5,1,147,#VALUE!,#VALUE!
+gi6912236,ANGPTL2,Angiopoietin-like 2,Molecular function unknown,6.29,3,57.1,3,493,#VALUE!,#VALUE!
+gi6912604,ANP32C,"Acidic (leucine-rich) nuclear phosphoprotein 32 family, member C",Molecular function unknown,2.56,1,26.7,3,234,#VALUE!,#VALUE!
+gi157266300,ANPEP,Alanyl (membrane) aminopeptidase,Metallopeptidase activity,9.93,8,109.5,29,967,#VALUE!,#VALUE!
+gi209862831,ANXA2,Annexin A2,Calcium ion binding,4.13,1,38.6,1,339,#VALUE!,#VALUE!
+gi4502119,AOC3,"Amine oxidase, copper containing 3 (vascular adhesion protein 1)",Cell adhesion molecule activity,2.49,1,84.6,2,763,#VALUE!,#VALUE!
+gi71773480,AOX1,Aldehyde oxidase 1,Catalytic activity,1.35,1,147.8,1,1338,#VALUE!,#VALUE!
+gi4502133,APCS,"Amyloid P component, serum",Binding,36.77,11,25.4,154,223,#VALUE!,#VALUE!
+gi4557321,APOA1,Apolipoprotein A-I,Transporter activity,89.89,46,30.8,3189,267,#VALUE!,#VALUE!
+gi4502149,APOA2,Apolipoprotein A-II,Transporter activity,69,9,11.2,189,189,#VALUE!,#VALUE!
+gi71773110,APOA4,Apolipoprotein A-IV,Transporter activity,79.8,49,45.3,1608,396,#VALUE!,#VALUE!
+gi105990532,APOB,Apolipoprotein B (including Ag(x) antigen),Transporter activity,66.64,320,515.2,6764,4563,#VALUE!,#VALUE!
+gi4502157,APOC1,Apolipoprotein C-I,Transporter activity,26.51,4,9.3,53,83,#VALUE!,#VALUE!
+gi32130518,APOC2,Apolipoprotein C-II,Transporter activity,49.5,4,11.3,42,101,#VALUE!,#VALUE!
+gi4557323,APOC3,Apolipoprotein C-III,Transporter activity,37.37,4,10.8,58,99,#VALUE!,#VALUE!
+gi4502161,APOC4,Apolipoprotein C-IV,Transporter activity,33.86,5,14.5,28,127,#VALUE!,#VALUE!
+gi4502163,APOD,Apolipoprotein D,Transporter activity,39.15,11,21.3,284,189,#VALUE!,#VALUE!
+gi4557325,APOE,Apolipoprotein E,Transporter activity,73.5,28,36.1,495,317,#VALUE!,#VALUE!
+gi4502165,APOF,Apolipoprotein F,Transporter activity,19.02,4,35.4,28,28,#VALUE!,#VALUE!
+gi153266841,APOH,Apolipoprotein H (beta-2-glycoprotein I),Transporter activity,73.04,23,38.3,590,345,#VALUE!,#VALUE!
+gi211938442,APOL1,"Apolipoprotein L, 1",Lipid transporter activity,35.79,15,42.1,100,380,#VALUE!,#VALUE!
+gi22035648,APOL3,"Apolipoprotein L, 3",Lipid transporter activity,3.96,1,21.6,1,202,#VALUE!,#VALUE!
+gi22091452,APOM,Apolipoprotein M,Transporter activity,70.21,13,21.2,106,188,#VALUE!,#VALUE!
+gi56676393,ARHGDIB,Rho GDP dissociation inhibitor (GDI) beta,Receptor signaling complex scaffold activity,4.48,1,23,1,201,#VALUE!,#VALUE!
+gi148762963,ARMC2,Armadillo repeat containing 2,Molecular function unknown,1.15,1,96.8,3,867,#VALUE!,#VALUE!
+gi18426875,ASGR2,Asialoglycoprotein receptor 2,Receptor activity,11.85,2,32.5,5,287,#VALUE!,#VALUE!
+gi301069322,ASPN,Asporin (LRR class 1),Extracellular matrix structural constituent,14.51,4,43.3,9,379,#VALUE!,#VALUE!
+gi155030185,ASUN,"Asunder, spermatogenesis regulator homolog (Drosphila)",Molecular function unknown,2.27,1,80.2,1,706,#VALUE!,#VALUE!
+gi62632750,ATP11B,"ATPase, Class VI, type 11B",ATPase activity,1.44,1,134.1,1,1177,#VALUE!,#VALUE!
+gi66730421,ATP13A5,ATPase type 13A5,Molecular function unknown,0.82,1,137.2,1,1218,#VALUE!,#VALUE!
+gi237681111,ATP1A1,"ATPase, Na+/K+ transporting, alpha 1polypeptide",ATPase activity,4.74,4,109.5,7,992,#VALUE!,#VALUE!
+gi28373113,ATP2A3,"ATPase, Ca++ transporting, ubiquitous",ATPase activity,4.31,3,109.1,5,998,#VALUE!,#VALUE!
+gi4757810,ATP5A1,"ATP synthase, H+ transporting, mitochondrialF1 complex, alpha subunit, isoform 1, cardiac muscle",Transporter activity,6.87,3,59.7,13,553,#VALUE!,#VALUE!
+gi32189394,ATP5B,"ATP synthase, H+ transporting, mitochondrial F1complex, beta polypeptide",Transporter activity,2.65,1,56.5,10,529,#VALUE!,#VALUE!
+gi21450863,ATRN,Attractin,Defense/immunity protein activity,29.8,30,141.3,269,1272,#VALUE!,#VALUE!
+gi27262651,ATXN2L,Ataxin 2-like,Molecular function unknown,0.77,1,110.3,1,1044,#VALUE!,#VALUE!
+gi211971080,ATXN7L1,Ataxin 7-like 1,-,2.57,1,77.8,1,738,#VALUE!,#VALUE!
+gi21536468,AXL,AXL receptor tyrosine kinase,Transmembrane receptor protein tyrosine kinase activity,2.6,2,97.3,3,885,#VALUE!,#VALUE!
+gi4502337,AZGP1,"Alpha-2-glycoprotein 1, zinc",Cell adhesion molecule activity,61.74,25,34.2,549,298,#VALUE!,#VALUE!
+gi4757826,B2M,Beta-2-microglobulin,MHC class I and MHC class II receptor activity,47.9,6,13.7,34,119,#VALUE!,#VALUE!
+gi4502343,B3GALNT1,"UDP-Gal:betaGlcNAc beta1,3-galactosyltransferase, polypeptide 3",Galactosyltransferase activity,3.32,1,39.5,1,331,#VALUE!,#VALUE!
+gi9845238,B3GNT2,"UDP-GlcNAc:betaGalbeta-1,3-N-acetylglucosaminyl transferase 1",Transferase activity,3.78,1,46,1,397,#VALUE!,#VALUE!
+gi4757828,B4GALT5,"UDP-Gal:betaGlcNAc beta 1,4-galactosyltransferase, polypeptide 5",Galactosyltransferase activity,2.06,1,45.1,3,388,#VALUE!,#VALUE!
+gi4557351,BCHE,Butyrylcholinesterase,Hydrolase activity,31.56,18,68.4,73,602,#VALUE!,#VALUE!
+gi4502403,BGN,Biglycan,Extracellular matrix structural constituent,2.99,1,41.6,1,368,#VALUE!,#VALUE!
+gi4557367,BLMH,Bleomycin hydrolase,Hydrolase activity,6.81,2,52.5,2,455,#VALUE!,#VALUE!
+gi10835091,BMP5,Bone morphogenetic protein 5,Receptor binding,1.54,1,51.7,1,454,#VALUE!,#VALUE!
+gi87299628,BOD1L1,Biorientation of chromosomes in cell division 1-like 1,Molecular function unknown,0.33,1,330.3,1,3051,#VALUE!,#VALUE!
+gi168229159,BST1,Bone marrow stromal cell antigen 1,Hydrolase activity,7.86,2,35.7,5,318,#VALUE!,#VALUE!
+gi4557373,BTD,Biotinidase,Hydrolase activity,24.49,11,61.1,97,543,#VALUE!,#VALUE!
+gi301172774,C10orf81,Chromosome 10 open reading frame 81,Molecular function unknown,1.37,1,41,2,366,#VALUE!,#VALUE!
+gi292781435,C12orf51,Chromosome 12 open reading frame 51,Molecular function unknown,0.4,1,466,1,4246,#VALUE!,#VALUE!
+gi254692913,C1orf129,Chromosome 1 open reading frame 129,Transcription regulator activity,0.81,1,98.3,1,861,#VALUE!,#VALUE!
+gi7705753,C1QA,"Complement component 1, q subcomponent, alphapolypeptide",Complement activity,28.98,5,26,32,245,#VALUE!,#VALUE!
+gi87298828,C1QB,"Complement component 1, q subcomponent, betapolypeptide",Complement activity,37.15,9,26.7,115,253,#VALUE!,#VALUE!
+gi166235903,C1QC,"Complement component 1, q subcomponent, gammapolypeptide",Complement activity,27.76,7,25.8,118,245,#VALUE!,#VALUE!
+gi66347875,C1R,"Complement component 1, r subcomponent",Complement activity,59.57,29,80.1,512,705,#VALUE!,#VALUE!
+gi289547636,C1RL,"Complement component 1, r subcomponent-like",Serine-type peptidase activity,20.33,8,53.5,121,487,#VALUE!,#VALUE!
+gi41393602,C1S,"Complement component 1, s subcomponent",Complement activity,49.85,29,76.6,428,688,#VALUE!,#VALUE!
+gi14550407,C2,Complement component 2,Complement activity,58.51,38,83.2,437,752,#VALUE!,#VALUE!
+gi24308201,C20orf3,Chromosome 20 open reading frame 3,Molecular function unknown,34.38,11,46.5,26,416,#VALUE!,#VALUE!
+gi115298678,C3,Complement component 3,Complement activity,88.94,169,187,11751,1663,#VALUE!,#VALUE!
+gi67190748,C4A,Complement component 4A,Complement activity,72.42,4,192.7,4855,1744,#VALUE!,#VALUE!
+gi178557739,C4B,Complement component 4B,Complement activity,72.76,5,192.6,5060,1744,#VALUE!,#VALUE!
+gi4502503,C4BPA,"Complement component 4 binding protein, alpha",Complement activity,63.15,33,67,856,597,#VALUE!,#VALUE!
+gi62912462,C4BPB,"Complement component 4 binding protein, beta",Complement activity,27.89,6,28.3,33,251,#VALUE!,#VALUE!
+gi38016947,C5,Complement component 5,Complement activity,57.16,89,188.2,1156,1676,#VALUE!,#VALUE!
+gi169636415,C6,Complement component 6,Complement activity,53.21,46,104.7,286,934,#VALUE!,#VALUE!
+gi256574805,C6orf132,Chromosome 6 open reading frame 132,-,0.76,1,124,2,1188,#VALUE!,#VALUE!
+gi45580688,C7,Complement component 7,Complement activity,62.99,47,93.5,448,843,#VALUE!,#VALUE!
+gi4557389,C8A,"Complement component 8, alpha polypeptide",Complement activity,41.44,19,65.1,189,584,#VALUE!,#VALUE!
+gi4557391,C8B,"Complement component 8, beta polypeptide",Complement activity,53.47,25,66.9,320,591,#VALUE!,#VALUE!
+gi166197660,C8G,"Complement component 8, gamma polypeptide",Complement activity,54.95,10,22.3,129,202,#VALUE!,#VALUE!
+gi4502511,C9,Complement component 9,Complement activity,53.85,29,63.1,741,559,#VALUE!,#VALUE!
+gi148762978,C9orf172,Chromosome 9 open reading frame 172,Molecular function unknown,0.61,1,106.6,5,976,#VALUE!,#VALUE!
+gi4502517,CA1,Carbonic anhydrase I,Catalytic activity,8.05,2,28.9,3,261,#VALUE!,#VALUE!
+gi70167127,CA6,Carbonic anhydrase VI,Catalytic activity,2.92,1,35.3,1,308,#VALUE!,#VALUE!
+gi58218968,CALM3,"Calmodulin 3 (phosphorylase kinase, delta)",Calcium ion binding,20.13,2,16.8,5,149,#VALUE!,#VALUE!
+gi39753970,CAMP,Cathelicidin antimicrobial peptide,Defense/immunity protein activity,5.29,1,19.3,3,170,#VALUE!,#VALUE!
+gi63252913,CAPG,"Capping protein (actin filament), gelsolin-like",Cytoskeletal protein binding,3.74,1,38.5,1,348,#VALUE!,#VALUE!
+gi51093861,CARD10,"Caspase recruitment domain family, member 10",Receptor signaling complex scaffold activity,1.36,1,115.9,2,1032,#VALUE!,#VALUE!
+gi4557014,CAT,Catalase,Oxidoreductase activity,3.8,2,59.7,2,527,#VALUE!,#VALUE!
+gi227430303,CD109,CD109 antigen (Gov platelet alloantigens),Molecular function unknown,5.19,5,152.6,7,1368,#VALUE!,#VALUE!
+gi4557417,CD14,CD14 antigen,Receptor activity,45.6,13,40.1,131,375,#VALUE!,#VALUE!
+gi344179112,CD163,CD163 antigen,Receptor activity,27.12,22,121.5,77,1121,#VALUE!,#VALUE!
+gi9966885,CD248,"CD248 antigen, endosialin",Receptor activity,1.98,2,80.8,3,757,#VALUE!,#VALUE!
+gi321400142,CD44,CD44 antigen (homing function and Indian bloodgroup system),Receptor activity,10.54,3,32.1,44,294,#VALUE!,#VALUE!
+gi10835143,CD55,"Decay accelerating factor for complement (CD55,Cromer blood group system)",Complement activity,3.15,1,41.4,3,381,#VALUE!,#VALUE!
+gi5174411,CD5L,CD5 antigen-like (scavenger receptor cysteinerich family),Defense/immunity protein activity,18.16,5,38.1,9,347,#VALUE!,#VALUE!
+gi296434290,CD84,CD84 antigen (leukocyte antigen),Molecular function unknown,8.09,1,30.5,1,272,#VALUE!,#VALUE!
+gi88758613,CD93,"Complement component 1, q subcomponent,receptor 1",Complement activity,9.82,5,68.5,8,652,#VALUE!,#VALUE!
+gi4502719,CDH13,"Cadherin 13, H-cadherin (heart)",Cell adhesion molecule activity,6.73,4,78.2,6,713,#VALUE!,#VALUE!
+gi166362713,CDH5,"Cadherin 5, type 2, VE-cadherin (vascular epithelium)",Cell adhesion molecule activity,13.78,10,87.5,49,784,#VALUE!,#VALUE!
+gi256542306,CDK5,Cyclin-dependent kinase 5,Protein serine/threonine kinase activity,3.46,1,29.5,1,260,#VALUE!,#VALUE!
+gi189217881,CEACAM19,Carcinoembryonic antigen-related cell adhesion molecule 19,Molecular function unknown,1.67,1,32.5,1,299,#VALUE!,#VALUE!
+gi29029550,CECR1,"Cat eye syndrome chromosome region, candidate 1",Deaminase activity,5.28,2,58.9,3,511,#VALUE!,#VALUE!
+gi7656967,CELSR1,"Cadherin, EGF LAG seven-pass G-type receptor 1(flamingo homolog, Drosophila)",G-protein coupled receptor activity,0.53,1,329.3,1,3014,#VALUE!,#VALUE!
+gi169636439,CETP,"Cholesteryl ester transfer protein, plasma",Transporter activity,3.04,1,54.7,2,493,#VALUE!,#VALUE!
+gi67782358,CFB,"B-factor, properdin",Complement activity,66.75,55,85.5,1066,764,#VALUE!,#VALUE!
+gi42544239,CFD,D component of complement (adipsin),Serine-type peptidase activity,57.31,13,27,177,253,#VALUE!,#VALUE!
+gi62739186,CFH,Complement factor H,Complement binding,72.46,69,139,2421,1231,#VALUE!,#VALUE!
+gi118442839,CFHR1,Complement factor H-related 1,Complement activity,54.24,3,37.6,303,330,#VALUE!,#VALUE!
+gi5031695,CFHR2,Complement factor H-related 2,Molecular function unknown,38.89,4,30.6,137,270,#VALUE!,#VALUE!
+gi54792787,CFHR3,Complement factor H-related 3,Complement activity,13.33,2,37.3,86,330,#VALUE!,#VALUE!
+gi320089550,CFHR4,Complement factor H-related 4,Transporter activity,13,4,65.2,13,577,#VALUE!,#VALUE!
+gi13540563,CFHR5,Complement factor H-related 5,Complement binding,7.03,2,64.4,21,569,#VALUE!,#VALUE!
+gi119392081,CFI,I factor (complement),Complement activity,53.34,31,65.7,414,583,#VALUE!,#VALUE!
+gi5031635,CFL1,Cofilin 1 (non-muscle),Cytoskeletal protein binding,13.86,2,18.5,2,166,#VALUE!,#VALUE!
+gi223671861,CFP,"Properdin P factor, complement",Complement activity,19.62,6,51.2,27,469,#VALUE!,#VALUE!
+gi153251229,CHAD,Chondroadherin,Extracellular matrix structural constituent,25.07,7,40.5,17,359,#VALUE!,#VALUE!
+gi144226251,CHI3L1,Chitinase 3-like 1 (cartilage glycoprotein-39),Extracellular matrix structural constituent,61.88,21,42.6,156,383,#VALUE!,#VALUE!
+gi68533253,CHI3L2,Chitinase 3-like 2,Molecular function unknown,29.21,8,42.5,14,380,#VALUE!,#VALUE!
+gi27894376,CHL1,Cell adhesion molecule with homology to L1CAM(close homolog of L1),Cell adhesion molecule activity,3.1,3,136.6,7,1224,#VALUE!,#VALUE!
+gi192449445,CILP,"Cartilage intermediate layer protein, nucleotidepyrophosphohydrolase",Extracellular matrix structural constituent,7.01,6,132.5,20,1184,#VALUE!,#VALUE!
+gi145699139,CILP2,Cartilage intermediate layer protein 2,Molecular function unknown,2.34,2,126.2,5,1156,#VALUE!,#VALUE!
+gi57222563,CKAP5,Cytoskeleton associated protein 5,Cytoskeletal protein binding,1.01,1,218.4,1,1972,#VALUE!,#VALUE!
+gi155969705,CLCNKB,Chloride channel Kb,Voltage-gated ion channel activity,2.18,1,75.4,2,687,#VALUE!,#VALUE!
+gi195947372,CLDN5,Claudin 5 (transmembrane protein deleted invelocardiofacial syndrome),Cell adhesion molecule activity,7.26,1,31.6,2,303,#VALUE!,#VALUE!
+gi148728186,CLEC3A,"C-type lectin domain family 3, member A",Extracellular matrix structural constituent,4.06,1,22.2,1,197,#VALUE!,#VALUE!
+gi156627579,CLEC3B,"C-type lectin domain family 3, member B",Molecular function unknown,62.38,14,22.5,162,202,#VALUE!,#VALUE!
+gi14251209,CLIC1,Chloride intracellular channel 1,Intracellular ligand-gated ion channel activity,3.73,1,26.9,1,241,#VALUE!,#VALUE!
+gi4758012,CLTC,"Clathrin, heavy polypeptide (Hc)",Structural molecule activity,0.42,1,191.5,3,1675,#VALUE!,#VALUE!
+gi42740907,CLU,"Clusterin (complement lysis inhibitor, SP-40,40,sulfated glycoprotein 2, testosterone-repressed prostate message 2,apolipoprotein J)",Complement activity,47.44,24,52.5,1109,449,#VALUE!,#VALUE!
+gi21071039,CNDP1,Carnosine dipeptidase 1 (metallopeptidase M20family),Metallopeptidase activity,39.45,16,56.7,82,507,#VALUE!,#VALUE!
+gi28373119,CNTN1,Contactin 1,Cell adhesion molecule activity,2.28,2,111.8,2,1007,#VALUE!,#VALUE!
+gi325197106,COG3,Component of oligomeric golgi complex 3,Transporter activity,0.72,1,94,6,828,#VALUE!,#VALUE!
+gi116008152,COL15A1,"Collagen, type XV, alpha 1",Extracellular matrix structural constituent,3.03,3,141.6,7,1388,#VALUE!,#VALUE!
+gi110611233,COL18A1,"Collagen, type XVIII, alpha 1",Extracellular matrix structural constituent,7.19,8,135.4,24,1366,#VALUE!,#VALUE!
+gi110349772,COL1A1,"Collagen, type I, alpha 1",Extracellular matrix structural constituent,16.12,19,138.8,79,1464,#VALUE!,#VALUE!
+gi48762934,COL1A2,"Collagen, type I, alpha 2",Extracellular matrix structural constituent,8.49,9,129.2,36,1366,#VALUE!,#VALUE!
+gi4502951,COL3A1,"Collagen, type III, alpha 1 (Ehlers-Danlossyndrome type IV, autosomal dominant)",Extracellular matrix structural constituent,9.75,11,138.5,54,1466,#VALUE!,#VALUE!
+gi148536825,COL4A1,"Collagen, type IV, alpha 1",Extracellular matrix structural constituent,1.74,2,160.5,4,1669,#VALUE!,#VALUE!
+gi116256354,COL4A2,"Collagen, type IV, alpha 2",Extracellular matrix structural constituent,0.76,1,167.4,1,1712,#VALUE!,#VALUE!
+gi89276751,COL5A1,"Collagen, type V, alpha 1",Extracellular matrix structural constituent,7.78,10,183.4,29,1838,#VALUE!,#VALUE!
+gi89363017,COL5A2,"Collagen, type V, alpha 2",Extracellular matrix structural constituent,4.2,3,144.8,5,1499,#VALUE!,#VALUE!
+gi87196339,COL6A1,"Collagen, type VI, alpha 1",Extracellular matrix structural constituent,6.81,5,108.5,17,1028,#VALUE!,#VALUE!
+gi115527070,COL6A2,"Collagen, type VI, alpha 2",Extracellular matrix structural constituent,1.93,1,87.2,1,828,#VALUE!,#VALUE!
+gi55743098,COL6A3,"Collagen, type VI, alpha 3",Extracellular matrix structural constituent,18.1,45,343.5,206,3177,#VALUE!,#VALUE!
+gi256017186,COLEC10,Collectin sub-family member 10 (C-typelectin),Molecular function unknown,3.61,1,30.7,2,277,#VALUE!,#VALUE!
+gi40548420,COLEC11,Collectin sub-family member 11,Molecular function unknown,5.97,2,29,3,268,#VALUE!,#VALUE!
+gi18641360,COLEC12,Collectin sub-family member 12,Receptor activity Pattern recognition receptor activity,1.62,1,81.5,2,742,#VALUE!,#VALUE!
+gi40217843,COMP,Cartilage oligomeric matrix protein,Extracellular matrix structural constituent,71.73,36,82.8,514,757,#VALUE!,#VALUE!
+gi190885499,COX5A,Cytochrome c oxidase subunit Va,Oxidoreductase activity,4,1,16.8,1,150,#VALUE!,#VALUE!
+gi4557485,CP,Ceruloplasmin (ferroxidase),Oxidoreductase activity,70.61,67,122.1,3097,1065,#VALUE!,#VALUE!
+gi126273569,CPB2,"Carboxypeptidase B2 (plasma, carboxypeptidase U)",Carboxypeptidase activity,47.99,17,48.4,124,423,#VALUE!,#VALUE!
+gi189027090,CPEB4,Cytoplasmic polyadenylation element binding protein 4,RNA binding,2.19,1,80.1,1,729,#VALUE!,#VALUE!
+gi4503011,CPN1,"Carboxypeptidase N, polypeptide 1, 50kD",Carboxypeptidase activity,49.34,16,52.3,152,458,#VALUE!,#VALUE!
+gi256217721,CPN2,"Carboxypeptidase N, polypeptide 2, 83kD",Enzyme regulator activity,48.62,19,60.5,239,545,#VALUE!,#VALUE!
+gi7706387,CPQ,Carboxypeptidase Q,-,2.12,1,51.9,1,472,#VALUE!,#VALUE!
+gi300244560,CRISP3,Cysteine-rich secretory protein 3,Extracellular matrix structural constituent,9.69,2,29,6,258,#VALUE!,#VALUE!
+gi4885153,CRKL,v-crk sarcoma virus CT10 oncogene homolog (avian)-like,Receptor signaling complex scaffold activity,3.63,1,33.8,1,303,#VALUE!,#VALUE!
+gi55770842,CRP,"C-reactive protein, pentraxin-related",Complement activity,20.98,5,25,14,224,#VALUE!,#VALUE!
+gi330688397,CRTAC1,Cartilage acidic protein 1,Calcium ion binding,57.36,30,70.4,468,645,#VALUE!,#VALUE!
+gi4758072,CRY1,Cryptochrome 1 (photolyase-like),Translation regulator activity,0.85,1,66.4,1,586,#VALUE!,#VALUE!
+gi4503055,CRYAA,"Crystallin, alpha A",Heat shock protein activity,12.14,2,19.9,9,173,#VALUE!,#VALUE!
+gi4503057,CRYAB,"Crystallin, alpha B",Heat shock protein activity,6.29,1,20.1,1,175,#VALUE!,#VALUE!
+gi115430219,CRYL1,"Crystallin, lambda 1",Oxidoreductase activity,2.19,1,35.4,1,319,#VALUE!,#VALUE!
+gi27262659,CSF1R,Colony stimulating factor 1 receptor,Transmembrane receptor protein tyrosine kinase activity,3.91,3,107.9,21,972,#VALUE!,#VALUE!
+gi4758078,CSK,c-src tyrosine kinase,Protein-tyrosine kinase activity,2.44,1,50.7,1,450,#VALUE!,#VALUE!
+gi47419930,CSPG4,Chondroitin sulfate proteoglycan 4 (melanoma-associated),Protein binding,0.73,1,250.4,2,2322,#VALUE!,#VALUE!
+gi4503107,CST3,Cystatin C (amyloid angiopathy and cerebral hemorrhage),Protease inhibitor activity,45.89,8,15.8,49,146,#VALUE!,#VALUE!
+gi4758092,CTBS,"Chitobiase, di-N-acetyl-",Catalytic activity,21.82,6,43.7,17,385,#VALUE!,#VALUE!
+gi4503123,CTGF,Connective tissue growth factor,Extracellular matrix structural constituent,10.03,3,38,6,349,#VALUE!,#VALUE!
+gi4503139,CTSB,Cathepsin B,Cysteine-type peptidase activity,7.37,2,37.8,8,339,#VALUE!,#VALUE!
+gi4503143,CTSD,Cathepsin D (lysosomal aspartyl protease),Aspartic-type signal peptidase activity,5.83,2,44.5,2,412,#VALUE!,#VALUE!
+gi23110955,CTSH,Cathepsin H,Cysteine-type peptidase activity,5.07,1,37.4,2,335,#VALUE!,#VALUE!
+gi4503155,CTSL1,Cathepsin L,Cysteine-type peptidase activity,3.6,1,37.5,2,333,#VALUE!,#VALUE!
+gi22538442,CTSZ,Cathepsin Z,Cysteine-type peptidase activity,12.87,3,33.8,6,303,#VALUE!,#VALUE!
+gi193794826,CYB5R3,Diaphorase (NADH) (cytochrome b-5 reductase),Catalytic activity,6.47,1,31.6,1,278,#VALUE!,#VALUE!
+gi294997284,DAG1,Dystroglycan 1 (dystrophin-associatedglycoprotein 1),Cell adhesion molecule activity,7.04,4,97.5,18,895,#VALUE!,#VALUE!
+gi116534900,DBH,Dopamine beta-hydroxylase (dopaminebeta-monooxygenase),Catalytic activity,9.89,4,69,10,617,#VALUE!,#VALUE!
+gi16751921,DCD,Dermcidin,Molecular function unknown,12.73,2,11.3,10,110,#VALUE!,#VALUE!
+gi324120908,DCDC5,Doublecortin domain containing 5,Cytoskeletal protein binding,0.67,1,100.3,5,890,#VALUE!,#VALUE!
+gi16933557,DCHS1,Dachsous 1,Cell adhesion molecule activity,0.39,1,346,1,3298,#VALUE!,#VALUE!
+gi4503271,DCN,Decorin,Extracellular matrix structural constituent,3.06,1,39.7,1,359,#VALUE!,#VALUE!
+gi9506931,DDX56,DEAD (Asp-Glu-Ala-Asp) box polypeptide 56,Helicase activity,3.29,1,61.6,1,547,#VALUE!,#VALUE!
+gi124248516,DEFA1B,"Defensin, alpha 1B",Defense/immunity protein activity,19.15,2,10.2,3,94,#VALUE!,#VALUE!
+gi40548389,DKK3,Dickkopf homolog 3,Receptor binding Lipid binding,12.86,3,38.4,11,350,#VALUE!,#VALUE!
+gi289802997,DNAI2,"Dynein, axonemal, intermediate polypeptide 2",Motor activity,2.7,1,67.4,1,593,#VALUE!,#VALUE!
+gi18765694,DPP4,"Dipeptidylpeptidase 4 (CD26, adenosine deaminase complexing protein 2)",Peptidase activity,3.13,2,88.2,2,766,#VALUE!,#VALUE!
+gi4826702,DSC1,Desmocollin 1,Cell adhesion molecule activity,1.55,1,93.8,2,840,#VALUE!,#VALUE!
+gi13435366,DSC2,Desmocollin 2,Cell adhesion molecule activity,2.01,1,93.7,2,847,#VALUE!,#VALUE!
+gi148539848,DSC3,Desmocollin 3,Cell adhesion molecule activity,1.19,1,93.4,1,839,#VALUE!,#VALUE!
+gi116534898,DSG2,Desmoglein 2,Cell adhesion molecule activity,2.77,2,122.2,5,1118,#VALUE!,#VALUE!
+gi58530842,DSP,Desmoplakin,Structural constituent of cytoskeleton,0.75,2,260,2,2272,#VALUE!,#VALUE!
+gi239788462,DUS3L,Dihydrouridine synthase 3-like (S. cerevisiae),DNA binding,3.38,1,72.5,1,650,#VALUE!,#VALUE!
+gi134288884,EARS2,"Glutamyl-tRNA synthetase 2, mitochondrial (putative)",Molecular function unknown,2.1,2,58.7,9,523,#VALUE!,#VALUE!
+gi221316614,ECM1,Extracellular matrix protein 1,Extracellular matrix structural constituent,51.11,18,60.6,106,106,#VALUE!,#VALUE!
+gi7662002,EDEM1,"ER degradation enhancer, mannosidase alpha-like1",Molecular function unknown,0.91,1,73.7,1,657,#VALUE!,#VALUE!
+gi4503471,EEF1A1,Eukaryotic translation elongation factor 1alpha 1,Transcription regulator activity,5.84,2,50.1,3,462,#VALUE!,#VALUE!
+gi86788015,EFEMP1,EGF-containing fibulin-like extracellularmatrix protein 1,Extracellular matrix structural constituent,52.94,21,54.6,223,493,#VALUE!,#VALUE!
+gi190684710,EFR3B,EFR3 homolog B (S. cerevisiae),Molecular function unknown,0.61,1,92.4,1,817,#VALUE!,#VALUE!
+gi7657058,EIF2B2,"Eukaryotic translation initiation factor 2B,subunit 2 beta, 39kDa",Translation regulator activity,4.84,1,39,1,351,#VALUE!,#VALUE!
+gi4503509,EIF3A,"Eukaryotic translation initiation factor 3,subunit 10 theta, 150/170kDa",Translation regulator activity,1.16,1,166.5,1,1382,#VALUE!,#VALUE!
+gi9966867,EIF5A2,Eukaryotic translation initiation factor 5A2,Translation regulator activity,7.84,1,16.8,2,153,#VALUE!,#VALUE!
+gi84043963,EIF5B,Eukaryotic translation initiation factor 5B,Translation regulator activity,1.31,1,138.7,1,1220,#VALUE!,#VALUE!
+gi4557555,ENG,Endoglin (Osler-Rendu-Weber syndrome 1),Receptor activity,1.76,1,67.5,1,625,#VALUE!,#VALUE!
+gi4503571,ENO1,"Enolase 1, (alpha)",Catalytic activity,37.56,11,47.1,21,434,#VALUE!,#VALUE!
+gi91823602,ENPP2,Ectonucleotidepyrophosphatase/phosphodiesterase 2 (autotaxin),Phosphoric diester hydrolase activity,6.84,4,98.9,7,863,#VALUE!,#VALUE!
+gi22538470,EOMES,Eomesodermin homolog (Xenopus laevis),Transcription factor activity,2.33,1,72.7,1,686,#VALUE!,#VALUE!
+gi155969701,ESPNL,Espin-like,Molecular function unknown,0.7,1,108.1,1,1005,#VALUE!,#VALUE!
+gi14149609,EXTL2,Exostoses (multiple)-like 2,Transferase activity,22.42,5,37.4,6,330,#VALUE!,#VALUE!
+gi4503625,F10,Coagulation factor X,Peptidase activity,34.02,16,54.7,83,488,#VALUE!,#VALUE!
+gi4503627,F11,Coagulation factor XI (plasma thromboplastinantecedent),Catalytic activity,19.36,9,70.1,20,625,#VALUE!,#VALUE!
+gi145275213,F12,Coagulation factor XII (Hageman factor),Peptidase activity,36.59,19,67.7,375,615,#VALUE!,#VALUE!
+gi119395709,F13A1,"Coagulation factor XIII, A1 polypeptide",Transferase activity,33.06,22,83.2,64,732,#VALUE!,#VALUE!
+gi110611237,F13B,"Coagulation factor XIII, B polypeptide",Transferase activity,52.04,28,75.5,166,661,#VALUE!,#VALUE!
+gi4503635,F2,Coagulation factor II (thrombin),Peptidase activity,61.41,39,70,1303,622,#VALUE!,#VALUE!
+gi105990535,F5,"Coagulation factor V (proaccelerin, labile factor)",Metal ion binding,1.84,3,251.5,7,2224,#VALUE!,#VALUE!
+gi10518503,F7,Coagulation factor VII (serum prothrombinconversion accelerator),Peptidase activity,11.26,3,49.3,6,444,#VALUE!,#VALUE!
+gi4503649,F9,"Coagulation factor IX (plasma thromboplasticcomponent, Christmas disease, hemophilia B)",Extracellular matrix binding,27.11,11,51.7,32,461,#VALUE!,#VALUE!
+gi4557587,FAH,Fumarylacetoacetate hydrolase(fumaryl acetoacetase),Hydrolase activity,19.57,6,46.3,13,419,#VALUE!,#VALUE!
+gi7661714,FAM3C,"Family with sequence similarity 3, member C",Cytokine activity,12.33,2,24.7,8,227,#VALUE!,#VALUE!
+gi42734438,FAM49B,"Family with sequence similarity 49, member B",Molecular function unknown,4.01,1,36.7,1,324,#VALUE!,#VALUE!
+gi226246523,FAN1,FANCD2/FANCI-associated nuclease 1,-,0.69,1,114.2,3,1017,#VALUE!,#VALUE!
+gi16933540,FAP,"Fibroblast activation protein, alpha",Serine-type peptidase activity,5.13,4,87.7,5,760,#VALUE!,#VALUE!
+gi40068497,FASTKD3,FAST kinase domains 3,Molecular function unknown,1.06,1,75.6,16,662,#VALUE!,#VALUE!
+gi165932370,FAT4,FAT tumor suppressor homolog 4,Cell adhesion molecule activity,0.36,1,542.4,1,4981,#VALUE!,#VALUE!
+gi34734066,FBLN1,Fibulin 1 isoform D,Extracellular matrix structural constituent,40.68,8,77.2,59,703,#VALUE!,#VALUE!
+gi34734062,FBLN1,Fibulin 1 isoform C,Extracellular matrix structural constituent,34.99,6,74.4,88,683,#VALUE!,#VALUE!
+gi281485550,FBN1,Fibrillin 1 (Marfan syndrome),Extracellular matrix structural constituent,1.18,2,312.1,4,2871,#VALUE!,#VALUE!
+gi229576894,FBXW12,F-box and WD-40 domain protein 12,Ubiquitin-specific protease activity,1.78,1,45,1,394,#VALUE!,#VALUE!
+gi154146262,FCGBP,Fc fragment of IgG binding protein,Molecular function unknown,10.1,19,571.6,63,5405,#VALUE!,#VALUE!
+gi189083842,FCGR3A,"Fc fragment of IgG, low affinity IIIa,receptor (CD16a)",Receptor activity,4.35,1,28.9,3,253,#VALUE!,#VALUE!
+gi61744445,FCN2,Ficolin (collagen/fibrinogen domain containinglectin) 2 (hucolin),Cell adhesion molecule activity,19.49,5,34,21,313,#VALUE!,#VALUE!
+gi27754776,FCN3,Ficolin (collagen/fibrinogen domain containing) 3 (Hakata antigen),Cell adhesion molecule activity,52.17,12,32.9,126,299,#VALUE!,#VALUE!
+gi58331240,FETUB,Fetuin B,Transporter activity,30.1,8,42,61,382,#VALUE!,#VALUE!
+gi4503689,FGA,"Fibrinogen, A alpha polypeptide",Protein binding,54.04,51,94.9,1985,866,#VALUE!,#VALUE!
+gi70906435,FGB,"Fibrinogen, B beta polypeptide",Protein binding,74.95,41,55.9,2015,491,#VALUE!,#VALUE!
+gi13994345,FGFBP2,Fibroblast growth factor binding protein 2,Cytokine activity,31.39,5,24.6,27,223,#VALUE!,#VALUE!
+gi70906437,FGG,"Fibrinogen, gamma polypeptide",Protein binding,86.04,35,49.5,1953,437,#VALUE!,#VALUE!
+gi60097902,FLG,Filaggrin,Calcium ion binding,1.72,1,434.9,2,4061,#VALUE!,#VALUE!
+gi62122917,FLG2,Filaggrin family member 2,Calcium ion binding,1.09,2,247.9,7,2391,#VALUE!,#VALUE!
+gi121114304,FLT3,Fms-related tyrosine kinase 3,Transmembrane receptor protein tyrosine kinase activity,2.32,1,112.8,1,993,#VALUE!,#VALUE!
+gi103472027,FLT4,Fms-related tyrosine kinase 4,Transmembrane receptor protein tyrosine kinase activity,1.23,1,145.5,1,1298,#VALUE!,#VALUE!
+gi71040111,FMOD,Fibromodulin,Extracellular matrix structural constituent,7.98,2,43.2,6,376,#VALUE!,#VALUE!
+gi16933542,FN1,Fibronectin 1 isoform 3,Extracellular matrix structural constituent,57.03,2,259.1,2664,2355,#VALUE!,#VALUE!
+gi47132557,FN1,Fibronectin 1 isoform 1,Extracellular matrix structural constituent,54.14,1,272.2,2635,2477,#VALUE!,#VALUE!
+gi166064050,FOLR2,Folate receptor 2 (fetal),Receptor activity,11.76,2,29.3,2,255,#VALUE!,#VALUE!
+gi167466190,FOXP3,Forkhead box P3,Transcription regulator activity,2.02,1,43.4,1,396,#VALUE!,#VALUE!
+gi5901956,FSTL1,Follistatin-like 1,Protease inhibitor activity,23.05,7,35,25,308,#VALUE!,#VALUE!
+gi20149498,FTL,"Ferritin, light polypeptide",Storage protein,17.71,2,20,4,175,#VALUE!,#VALUE!
+gi100816392,FUBP3,Far upstream element (FUSE) binding protein 3,Transcription factor activity,1.57,1,61.6,3,572,#VALUE!,#VALUE!
+gi119360348,FUCA1,"Fucosidase, alpha-L- 1, tissue",Hydrolase activity,2.36,1,53.7,1,466,#VALUE!,#VALUE!
+gi40068512,FUCA2,"Fucosidase, alpha-L- 2, plasma",Hydrolase activity,9.21,4,54,6,467,#VALUE!,#VALUE!
+gi7669492,GAPDH,Glyceraldehyde-3-phosphate dehydrogenase,Catalytic activity,4.18,1,36,2,335,#VALUE!,#VALUE!
+gi32483410,GC,Group-specific component (vitamin D binding protein),Transporter activity,81.22,43,52.9,1748,474,#VALUE!,#VALUE!
+gi22208850,GCC1,GRIP and coiled-coil domain containing 1,Structural molecule activity,1.29,1,87.8,1,775,#VALUE!,#VALUE!
+gi169646441,GDI2,GDP dissociation inhibitor 2,Auxiliary transport protein activity,2.75,1,45.6,1,400,#VALUE!,#VALUE!
+gi196115290,GFAP,Glial fibrillary acidic protein,Structural molecule activity,4.87,1,49.5,13,431,#VALUE!,#VALUE!
+gi4503987,GGH,"Gamma-glutamyl hydrolase (conjugase,folylpolygamma glutamyl hydrolase)",Hydrolase activity,34.28,10,35.9,41,318,#VALUE!,#VALUE!
+gi94538357,GKN1,Gastrokine 1,Molecular function unknown,15.08,2,22,2,199,#VALUE!,#VALUE!
+gi11641247,GLIPR2,GLI pathogenesis-related 2,Molecular function unknown,16.88,2,17.2,2,154,#VALUE!,#VALUE!
+gi260593686,GLRB,"Glycine receptor, beta",Intracellular ligand-gated ion channel activity,1.98,1,34.9,1,303,#VALUE!,#VALUE!
+gi39995109,GM2A,GM2 ganglioside activator,Transporter activity,21.24,3,20.8,4,193,#VALUE!,#VALUE!
+gi14249738,GNPTG,"N-acetylglucosamine-1-phosphotransferase, gamma subunit",Catalytic activity,21.31,4,34,18,305,#VALUE!,#VALUE!
+gi29550838,GOLM1,Golgi membrane protein 1,Transporter activity,18.7,6,45.3,20,401,#VALUE!,#VALUE!
+gi4504067,GOT1,"Glutamic-oxaloacetic transaminase 1, soluble (aspartate aminotransferase 1)",Transaminase activity,5.81,2,46.2,3,413,#VALUE!,#VALUE!
+gi291190772,GP1BA,"Glycoprotein Ib (platelet), alpha polypeptide",Receptor activity,8.28,4,71.5,7,652,#VALUE!,#VALUE!
+gi66932975,GPHN,Gephyrin,Molecular function unknown Receptor binding,2.72,1,79.7,1,736,#VALUE!,#VALUE!
+gi18201905,GPI,Glucose phosphate isomerase,Isomerase activity,3.05,1,63.1,1,558,#VALUE!,#VALUE!
+gi29171717,GPLD1,Glycosylphosphatidylinositol specificphospholipase D1,Phospholipase activity,29.17,20,92.3,109,840,#VALUE!,#VALUE!
+gi74048422,GPR126,G protein-coupled receptor 126,G-protein coupled receptor activity,1.34,1,133.6,1,1193,#VALUE!,#VALUE!
+gi6006001,GPX3,Glutathione peroxidase 3 (plasma),Peroxidase activity,37.61,8,25.5,59,226,#VALUE!,#VALUE!
+gi4504165,GSN,"Gelsolin (amyloidosis, Finnish type)",Structural constituent of cytoskeleton,58.44,44,85.6,1196,782,#VALUE!,#VALUE!
+gi305410793,GSR,Glutathione reductase,Catalytic activity,2.73,1,47.2,1,440,#VALUE!,#VALUE!
+gi300360534,GSTO1,Glutathione S-transferase omega 1,Glutathione transferase activity,8.45,2,24.8,2,213,#VALUE!,#VALUE!
+gi4504183,GSTP1,Glutathione S-transferase pi,Glutathione transferase activity,7.62,1,23.3,2,210,#VALUE!,#VALUE!
+gi38176149,GUCA2A,Guanylate cyclase activator 2A (guanylin),Peptide hormone,9.57,1,12.4,1,115,#VALUE!,#VALUE!
+gi5174449,H1FX,"H1 histone family, member X",DNA binding,4.23,1,22.5,1,213,#VALUE!,#VALUE!
+gi52145310,H6PD,Hexose-6-phosphate dehydrogenase (glucose1-dehydrogenase),Catalytic activity,1.39,1,88.8,1,791,#VALUE!,#VALUE!
+gi295054188,HABP2,Hyaluronan binding protein 2,Serine-type peptidase activity,32.02,17,59.8,124,534,#VALUE!,#VALUE!
+gi4503053,HAPLN1,Hyaluronan and proteoglycan link protein 1,Extracellular matrix structural constituent,49.44,13,40.1,79,354,#VALUE!,#VALUE!
+gi30102948,HAPLN3,Hyaluronan and proteoglycan link protein 3,Cell adhesion molecule activity,12.22,2,40.9,16,360,#VALUE!,#VALUE!
+gi49574534,HAVCR2,Hepatitis A virus cellular receptor 2,Receptor activity,4.65,1,33.4,1,301,#VALUE!,#VALUE!
+gi4504345,HBA2,"Hemoglobin, alpha 2",Transporter activity,21.83,2,15.2,11,142,#VALUE!,#VALUE!
+gi4504349,HBB,"Hemoglobin, beta",Transporter activity,68.03,8,16,25,147,#VALUE!,#VALUE!
+gi4504383,HGFAC,HGF activator,Serine-type peptidase activity,31.45,15,70.6,121,655,#VALUE!,#VALUE!
+gi10800138,HIST1H2BD,"Histone 1, H2bd",DNA binding,13.49,2,13.9,2,126,#VALUE!,#VALUE!
+gi4504321,HIST1H4I,"Histone 1, H4i",DNA binding,34.95,3,11.4,13,103,#VALUE!,#VALUE!
+gi24797067,HLA-A,"Major histocompatibility complex, class I, A",MHC class I receptor activity MHC class II receptor activity,11.78,2,40.8,19,365,#VALUE!,#VALUE!
+gi62912479,HLA-E,"Major histocompatibility complex, class I, E",MHC class I receptor activity MHC class II receptor activity,8.1,1,40,8,358,#VALUE!,#VALUE!
+gi118572606,HMCN1,Hemicentin 1,Extracellular matrix structural constituent,0.28,1,613,1,5635,#VALUE!,#VALUE!
+gi4826762,HP,Haptoglobin,Transporter activity,52.96,11,45.2,1898,406,#VALUE!,#VALUE!
+gi45580723,HPR,Haptoglobin-related protein,Molecular function unknown,41.09,3,39,884,348,#VALUE!,#VALUE!
+gi11321561,HPX,Hemopexin,Transporter activity,77.27,42,51.6,4618,462,#VALUE!,#VALUE!
+gi4504489,HRG,Histidine-rich glycoprotein,Binding Immunoglobulin binding Polysaccharide binding Protein binding Complement binding Metal ion binding,57.71,26,59.5,1240,525,#VALUE!,#VALUE!
+gi57864582,HRNR,Hornerin,Molecular function unknown,4.49,2,282.2,10,2850,#VALUE!,#VALUE!
+gi20149594,HSP90AB1,"Heat shock 90kDa protein 1, beta",Chaperone activity,3.59,1,83.2,3,724,#VALUE!,#VALUE!
+gi4507677,HSP90B1,"Heat shock protein 90kDa beta (Grp94), member 1",Heat shock protein activity,3.24,1,92.4,3,803,#VALUE!,#VALUE!
+gi16507237,HSPA5,"Heat shock 70kDa protein 5 (glucose-regulatedprotein, 78kDa)",Chaperone activity,6.73,3,72.3,5,654,#VALUE!,#VALUE!
+gi5729877,HSPA8,Heat shock 70kDa protein 8,Heat shock protein activity,6.66,3,70.9,8,646,#VALUE!,#VALUE!
+gi126012571,HSPG2,Heparan sulfate proteoglycan 2 (perlecan),Extracellular matrix structural constituent,5.42,17,468.5,47,4391,#VALUE!,#VALUE!
+gi4506141,HTRA1,"Protease, serine, 11 (IGF binding)",Serine-type peptidase activity,14.79,7,51.3,38,480,#VALUE!,#VALUE!
+gi167466198,ICAM1,Intercellular adhesion molecule 1 (CD54),Cell adhesion molecule activity,12.78,5,57.8,8,532,#VALUE!,#VALUE!
+gi153082696,ICAM2,Intercellular adhesion molecule 2,Cell adhesion molecule activity,5.45,1,30.6,2,275,#VALUE!,#VALUE!
+gi27477039,ICOSLG,Inducible T-cell co-stimulator ligand,Receptor binding,3.31,1,33.3,3,302,#VALUE!,#VALUE!
+gi28178825,IDH1,"Isocitrate dehydrogenase 1 (NADP+), soluble",Catalytic activity,5.31,2,46.6,4,414,#VALUE!,#VALUE!
+gi163659901,IGF1,Insulin-like growth factor 1 (somatomedin C),Growth factor activity Hormone activity,30.66,4,15.2,8,137,#VALUE!,#VALUE!
+gi108796063,IGF2,Insulin-like growth factor 2 (somatomedin A),Growth factor activity Receptor binding,13.89,2,20.1,3,180,#VALUE!,#VALUE!
+gi4826772,IGFALS,"Insulin-like growth factor binding protein,acid labile subunit",Molecular function unknown,43.97,22,66,258,605,#VALUE!,#VALUE!
+gi55925576,IGFBP2,"Insulin-like growth factor binding protein 2,36kDa",Growth factor activity,27.13,7,35.1,18,328,#VALUE!,#VALUE!
+gi62243068,IGFBP3,Insulin-like growth factor binding protein 3,Growth factor binding,20.62,5,31.7,22,291,#VALUE!,#VALUE!
+gi62243290,IGFBP4,Insulin-like growth factor binding protein 4,Cell adhesion molecule activity,17.83,3,27.9,9,258,#VALUE!,#VALUE!
+gi10834982,IGFBP5,Insulin-like growth factor binding protein 5,Cell adhesion molecule activity,14.71,3,30.6,7,272,#VALUE!,#VALUE!
+gi11321593,IGFBP6,Insulin-like growth factor binding protein 6,Cell adhesion molecule activity,22.5,6,25.3,38,240,#VALUE!,#VALUE!
+gi4504619,IGFBP7,Insulin-like growth factor binding protein 7,Cell adhesion molecule activity,17.38,4,29.1,10,282,#VALUE!,#VALUE!
+gi21489959,IGJ,"Immunoglobulin J polypeptide, linker protein forimmunoglobulin alpha and mu polypeptides",Antigen binding,28.93,5,18.1,52,159,#VALUE!,#VALUE!
+gi13399298,IGLL1,Immunoglobulin lambda-like polypeptide 1,Molecular function unknown,7.04,1,22.9,1,213,#VALUE!,#VALUE!
+gi295986608,IGLL5,Immunoglobulin lambda-like polypeptide 5,-,24.3,4,23,226,214,#VALUE!,#VALUE!
+gi119392086,IHH,Indian hedgehog homolog (Drosophila),Receptor binding,10.46,2,45.2,7,411,#VALUE!,#VALUE!
+gi19882209,IL1RAP,Interleukin 1 receptor accessory protein,Receptor activity,10.67,3,41,6,356,#VALUE!,#VALUE!
+gi333033767,IL21,Interleukin 21,Cytokine activity,6.54,1,17.6,1,153,#VALUE!,#VALUE!
+gi28610149,IL6ST,"Interleukin 6 signal transducer (gp130, oncostatin M receptor)",Transmembrane receptor activity,5.17,1,37.5,1,329,#VALUE!,#VALUE!
+gi5031795,INHBC,"Inhibin, beta C",Receptor binding,4.83,2,38.2,2,352,#VALUE!,#VALUE!
+gi119395738,INSR,Insulin receptor,Transmembrane receptor protein tyrosine kinase activity,0.44,1,155,4,1370,#VALUE!,#VALUE!
+gi5031809,ISLR,Immunoglobulin superfamily containing leucine-rich repeat,Cell adhesion molecule activity,17.52,6,46,46,428,#VALUE!,#VALUE!
+gi19743823,ITGB1,"Integrin, beta 1 (fibronectin receptor, betapolypeptide, antigen CD29 includes MDF2, MSK12)",Receptor activity,1.13,1,88.4,4,798,#VALUE!,#VALUE!
+gi4504777,ITGB7,"Integrin, beta 7",Receptor activity,1.38,1,86.8,1,798,#VALUE!,#VALUE!
+gi156119625,ITIH1,Inter-alpha (globulin) inhibitor H1,Protease inhibitor activity,43.47,34,101.3,1164,911,#VALUE!,#VALUE!
+gi70778918,ITIH2,Inter-alpha (globulin) inhibitor H2,Protease inhibitor activity,44.08,38,106.4,1274,946,#VALUE!,#VALUE!
+gi133925809,ITIH3,Inter-alpha (globulin) inhibitor H3,Protease inhibitor activity,36.63,25,99.8,230,890,#VALUE!,#VALUE!
+gi262050538,ITIH4,Inter-alpha (globulin) inhibitor H4 (plasmaKallikrein-sensitive glycoprotein) isoform 2,Protease inhibitor activity,66.22,1,99.8,1606,900,#VALUE!,#VALUE!
+gi31542984,ITIH4,Inter-alpha (globulin) inhibitor H4 (plasmaKallikrein-sensitive glycoprotein) isoform 1,Protease inhibitor activity,65.16,2,103.3,1630,930,#VALUE!,#VALUE!
+gi90093355,JHDM1D,Jumonji C domain-containing histone demethylase 1 homolog D (S. cerevisiae),Molecular function unknown,1.06,1,106.5,12,941,#VALUE!,#VALUE!
+gi239788849,JMJD4,Jumonji domain containing 4,Molecular function unknown,1.12,1,50.4,1,447,#VALUE!,#VALUE!
+gi19923973,KCTD12,Potassium channel tetramerisation domaincontaining 12,Ion channel activity,2.15,1,35.7,1,325,#VALUE!,#VALUE!
+gi11321597,KDR,Kinase insert domain receptor (a type IIIreceptor tyrosine kinase),Transmembrane receptor protein tyrosine kinase activity,1.18,1,151.4,1,1356,#VALUE!,#VALUE!
+gi154689847,KIAA0753,KIAA0753,Molecular function unknown,0.72,1,109.3,1,967,#VALUE!,#VALUE!
+gi55749715,KIAA1328,KIAA1328,Molecular function unknown,0.87,1,65.3,1,577,#VALUE!,#VALUE!
+gi149274646,KIAA1614,KIAA1614,Molecular function unknown,1.76,1,126.5,1,1190,#VALUE!,#VALUE!
+gi315434259,KIF16B,Kinesin family member 16B,Auxiliary transport protein activity,0.47,1,146.2,2,1266,#VALUE!,#VALUE!
+gi30794488,KIF27,Kinesin family member 27,Motor activity,0.71,1,160.2,1,1401,#VALUE!,#VALUE!
+gi148005039,KIT,v-kit Hardy-Zuckerman 4 feline sarcoma viraloncogene homolog,Transmembrane receptor protein tyrosine kinase activity,0.62,1,109.4,1,972,#VALUE!,#VALUE!
+gi78191798,KLKB1,"Kallikrein B, plasma (Fletcher factor) 1",Serine-type peptidase activity,56.11,33,71.3,475,638,#VALUE!,#VALUE!
+gi4504893,KNG1,Kininogen 1,Protease inhibitor activity,63,4,47.9,1088,427,#VALUE!,#VALUE!
+gi156231037,KNG1,Kininogen 1,Protease inhibitor activity,48.14,6,71.9,1109,644,#VALUE!,#VALUE!
+gi119395750,KRT1,Keratin 1 (epidermolytic hyperkeratosis),Structural molecule activity,53.42,34,66,1167,644,#VALUE!,#VALUE!
+gi195972866,KRT10,Keratin 10 (epidermolytic hyperkeratosis; keratosis palmaris et plantaris),Structural molecule activity,55.82,30,58.8,826,584,#VALUE!,#VALUE!
+gi15431310,KRT14,"Keratin 14 (epidermolysis bullosa simplex, Dowling-Meara, Koebner)",Structural constituent of cytoskeleton,30.08,5,51.6,124,472,#VALUE!,#VALUE!
+gi24430192,KRT16,Keratin 16 (focal non-epidermolyticpalmoplantar keratoderma),Structural constituent of cytoskeleton,21.35,2,51.2,108,473,#VALUE!,#VALUE!
+gi47132620,KRT2,Keratin 2A (epidermal ichthyosis bullosa of Siemens),Cytoskeletal protein binding,64.63,25,65.4,655,639,#VALUE!,#VALUE!
+gi22748757,KRT222,Keratin 222,Molecular function unknown,5.08,1,34.1,3,295,#VALUE!,#VALUE!
+gi14917115,KRT31,"Keratin, hair, acidic, 1",Structural molecule activity,13.94,4,47.2,33,416,#VALUE!,#VALUE!
+gi119395754,KRT5,"Keratin 5 (epidermolysis bullosa simplex, Dowling-Meara/Kobner/Weber-Cockayne types)",Structural molecule activity,22.2,6,62.3,111,590,#VALUE!,#VALUE!
+gi5031839,KRT6A,Keratin 6A,Structural molecule activity,21.99,4,60,109,564,#VALUE!,#VALUE!
+gi194018511,KRT77,Keratin 1B,Structural molecule activity,5.71,1,61.9,126,578,#VALUE!,#VALUE!
+gi89357932,KRT78,Keratin 78,Structural molecule activity,2.31,1,56.8,2,520,#VALUE!,#VALUE!
+gi4504935,KRT85,"Keratin, hair, basic, 5",Structural constituent of cytoskeleton,7.3,2,55.8,4,507,#VALUE!,#VALUE!
+gi14318422,KRT86,"Keratin, hair, basic, 6 (monilethrix)",Structural constituent of cytoskeleton,10.91,2,53.5,5,486,#VALUE!,#VALUE!
+gi55956899,KRT9,Keratin 9 (epidermolytic palmoplantarkeratoderma),Structural molecule activity,59.55,28,62,485,623,#VALUE!,#VALUE!
+gi13994362,KRTAP3-1,Keratin associated protein 3-1,Structural molecule activity,17.35,1,10.5,1,98,#VALUE!,#VALUE!
+gi119466532,LAMA2,"Laminin, alpha 2 (merosin, congenital musculardystrophy)",Extracellular matrix structural constituent,0.35,1,343.3,1,3118,#VALUE!,#VALUE!
+gi21264602,LAMA5,"Laminin, alpha 5",Cell adhesion molecule activity,0.43,1,399.5,1,3695,#VALUE!,#VALUE!
+gi112380628,LAMP1,Lysosomal-associated membrane protein 1,Molecular function unknown,2.16,1,44.9,1,417,#VALUE!,#VALUE!
+gi4504957,LAMP2,Lysosomal-associated membrane protein 2,Cell adhesion molecule activity,4.88,2,44.9,7,410,#VALUE!,#VALUE!
+gi31652249,LBP,Lipopolysaccharide binding protein,Polysaccharide binding,23.28,11,53.3,109,481,#VALUE!,#VALUE!
+gi4557892,LCAT,Lecithin-cholesterol acyltransferase,Acyltransferase activity,32.73,9,49.5,36,440,#VALUE!,#VALUE!
+gi4504963,LCN1,Lipocalin 1 (tear prealbumin),Transporter activity,6.25,1,19.2,1,176,#VALUE!,#VALUE!
+gi38455402,LCN2,Lipocalin 2 (oncogene 24p3),Transporter activity,34.34,5,22.6,10,198,#VALUE!,#VALUE!
+gi167614506,LCP1,Lymphocyte cytosolic protein 1 (L-plastin),Calcium ion binding,41.47,19,70.2,49,627,#VALUE!,#VALUE!
+gi5031857,LDHA,Lactate dehydrogenase A,Catalytic activity,18.07,3,36.7,7,332,#VALUE!,#VALUE!
+gi291575128,LDHB,Lactate dehydrogenase B,Catalytic activity,33.53,9,36.6,17,334,#VALUE!,#VALUE!
+gi4504981,LGALS1,"Lectin, galactoside-binding, soluble, 1 (galectin 1)",Receptor binding,33.33,3,14.7,10,135,#VALUE!,#VALUE!
+gi5031863,LGALS3BP,"Lectin, galactoside-binding, soluble, 3 binding protein",Extracellular matrix structural constituent,25.64,12,65.3,74,585,#VALUE!,#VALUE!
+gi5803023,LMAN2,"Lectin, mannose-binding 2",Transporter activity,9.27,3,40.2,4,356,#VALUE!,#VALUE!
+gi33598968,LMO7,LIM domain 7,Transcription regulator activity,0.44,1,153.6,1,1349,#VALUE!,#VALUE!
+gi336594719,LOC100130357,-,-,5.23,1,16.7,1,153,#VALUE!,#VALUE!
+gi341914926,LOC100134256,-,-,4.76,1,25.3,5,231,#VALUE!,#VALUE!
+gi341915168,LOC100287723,-,-,13.01,1,13.3,8,123,#VALUE!,#VALUE!
+gi341914862,LOC100291917,-,-,9.83,2,33.3,46,295,#VALUE!,#VALUE!
+gi341915156,LOC100652743,-,-,5.96,1,16.6,17,151,#VALUE!,#VALUE!
+gi341915493,LOC100652938,-,-,0.55,1,165.9,1,1456,#VALUE!,#VALUE!
+gi341914912,LOC100653070,-,-,6.31,1,32.6,3,301,#VALUE!,#VALUE!
+gi341913933,LOC100653084,-,-,10.39,2,31.5,35,279,#VALUE!,#VALUE!
+gi341914298,LOC100653194,-,-,3.94,1,41.6,3,381,#VALUE!,#VALUE!
+gi341914409,LOC100653210,-,-,19.74,2,16.6,19,152,#VALUE!,#VALUE!
+gi341915780,LOC401847,-,-,14.86,2,16.3,54,148,#VALUE!,#VALUE!
+gi341913937,LOC642131,-,-,11.64,2,20.9,22,189,#VALUE!,#VALUE!
+gi20149540,LOX,Lysyl oxidase,Catalytic activity,1.68,1,46.9,2,417,#VALUE!,#VALUE!
+gi116292750,LPA,"Lipoprotein, Lp(a)",Transporter activity,34.95,21,226.4,94,2040,#VALUE!,#VALUE!
+gi16418467,LRG1,Leucine-rich alpha-2-glycoprotein 1,Molecular function unknown,54.47,17,38.2,404,347,#VALUE!,#VALUE!
+gi126012562,LRP1,Low density lipoprotein-related protein 1(alpha-2-macroglobulin receptor),Receptor activity,8.47,30,504.3,88,4544,#VALUE!,#VALUE!
+gi45439342,LRR1,Peptidylprolyl isomerase (cyclophilin)-like 5,-,1.45,1,46.7,1,414,#VALUE!,#VALUE!
+gi223029424,LSG1,Large subunit GTPase 1 homolog (S. cerevisiae),Nucleotide binding GTPase activity,1.22,1,75.2,2,658,#VALUE!,#VALUE!
+gi4505029,LTA4H,Leukotriene A4 hydrolase,Hydrolase activity,3.6,1,69.2,3,611,#VALUE!,#VALUE!
+gi261337173,LTBP1,Latent transforming growth factor beta bindingprotein 1,Extracellular matrix structural constituent,1.38,1,142.6,1,1300,#VALUE!,#VALUE!
+gi4557733,LTBP2,Latent transforming growth factor beta bindingprotein 2,Extracellular matrix structural constituent,1.15,1,194.9,1,1821,#VALUE!,#VALUE!
+gi4505047,LUM,Lumican,Extracellular matrix structural constituent,42.31,15,38.4,1079,338,#VALUE!,#VALUE!
+gi40549451,LYVE1,Extracellular link domain containing 1,Receptor activity,10.25,4,35.2,39,322,#VALUE!,#VALUE!
+gi4557894,LYZ,Lysozyme (renal amyloidosis),Hydrolase activity,35.14,3,16.5,11,148,#VALUE!,#VALUE!
+gi62953129,MAEA,Macrophage erythroblast attacher,Cell adhesion molecule activity,1.69,1,40.4,1,355,#VALUE!,#VALUE!
+gi24497519,MAN1A1,"Mannosidase, alpha, class 1A, member 1",Hydrolase activity,16.85,9,72.9,18,653,#VALUE!,#VALUE!
+gi5174547,MAP3K5,Mitogen-activated protein kinase kinase kinase5,Protein serine/threonine kinase activity,0.58,1,154.4,1,1374,#VALUE!,#VALUE!
+gi5803080,MARCO,Macrophage receptor with collagenous structure,Receptor activity,5.38,2,52.6,2,520,#VALUE!,#VALUE!
+gi21264359,MASP1,Mannan-binding lectin serine protease 1 isoform 2,Serine-type peptidase activity,15.66,3,81.8,37,728,#VALUE!,#VALUE!
+gi21264357,MASP1,Mannan-binding lectin serine protease 1 isoform 1,Serine-type peptidase activity,14.45,2,79.2,36,699,#VALUE!,#VALUE!
+gi21264363,MASP2,Mannan-binding lectin serine protease 2,Serine-type peptidase activity,9.33,5,75.7,10,686,#VALUE!,#VALUE!
+gi4885477,MB,Myoglobin,Transporter activity,33.77,4,17.2,10,154,#VALUE!,#VALUE!
+gi4557739,MBL2,"Mannose-binding lectin (protein C) 2, soluble(opsonic defect)",Transporter activity,17.74,5,26.1,10,248,#VALUE!,#VALUE!
+gi71274107,MCAM,Melanoma cell adhesion molecule,Cell adhesion molecule activity,6.81,3,71.6,7,646,#VALUE!,#VALUE!
+gi312283703,MDH1,"Malate dehydrogenase 1, NAD (soluble)",Catalytic activity,4.9,1,27,1,245,#VALUE!,#VALUE!
+gi145701025,MEGF8,"EGF-like-domain, multiple 4",Cell adhesion molecule activity,0.58,1,295.7,1,2778,#VALUE!,#VALUE!
+gi66932918,MERTK,c-mer proto-oncogene tyrosine kinase,Transmembrane receptor protein tyrosine kinase activity,1.2,1,110.2,1,999,#VALUE!,#VALUE!
+gi7710152,MGAT4B,"Mannosyl (alpha-1,3-)-glycoproteinbeta-1,4-N-acetylglucosaminyltransferase, isoenzyme B",Catalase activity,1.46,1,63.2,1,548,#VALUE!,#VALUE!
+gi49574514,MGP,Matrix Gla protein,Extracellular matrix structural constituent,10.68,1,12.3,2,103,#VALUE!,#VALUE!
+gi19923761,MINPP1,"Multiple inositol polyphosphate histidinephosphatase, 1",Lipid phosphatase activity,16.02,5,55,11,487,#VALUE!,#VALUE!
+gi225543094,MMP1,Matrix metalloproteinase 1 (interstitialcollagenase),Metallopeptidase activity,23.08,8,46.2,23,403,#VALUE!,#VALUE!
+gi4505205,MMP10,Matrix metalloproteinase 10 (stromelysin 2),Metallopeptidase activity,6.09,1,54.1,45,476,#VALUE!,#VALUE!
+gi11342666,MMP2,"Matrix metalloproteinase 2 (gelatinase A, 72kDagelatinase, 72kDa type IV collagenase)",Metallopeptidase activity,40.76,17,73.8,60,660,#VALUE!,#VALUE!
+gi4505217,MMP3,"Matrix metalloproteinase 3 (stromelysin 1,progelatinase)",Metallopeptidase activity,42.14,21,53.9,225,477,#VALUE!,#VALUE!
+gi45269141,MMRN1,Multimerin 1,Protein binding,1.06,1,138,2,1228,#VALUE!,#VALUE!
+gi221316695,MMRN2,Multimerin 2,Extracellular matrix structural constituent,2.42,2,104.3,4,949,#VALUE!,#VALUE!
+gi55956910,MN1,Meningioma (disrupted in balanced translocation)1,Molecular function unknown,1.59,1,135.9,1,1320,#VALUE!,#VALUE!
+gi110624774,MRC2,"Mannose receptor, C type 2",Receptor activity,2.97,3,166.6,14,1479,#VALUE!,#VALUE!
+gi9910244,MRPS22,Mitochondrial ribosomal protein S22,Structural constituent of ribosome,3.33,1,41.3,1,360,#VALUE!,#VALUE!
+gi13027604,MRPS34,Mitochondrial ribosomal protein S34,Structural constituent of ribosome,3.21,1,25.6,1,218,#VALUE!,#VALUE!
+gi36949366,MSH4,MutS homolog 4 ,DNA repair protein,2.24,1,104.7,2,936,#VALUE!,#VALUE!
+gi4505257,MSN,Moesin,Structural constituent of cytoskeleton,4.51,3,67.8,3,577,#VALUE!,#VALUE!
+gi205277383,MST1,Macrophage stimulating 1 (hepatocyte growthfactor-like),Growth factor activity,33.24,19,81.9,73,725,#VALUE!,#VALUE!
+gi94721354,MTHFD2,"Methylenetetrahydrofolate dehydrogenase (NADP+dependent) 2, methenyltetrahydrofolate cyclohydrolase",Catalytic activity,3.43,1,37.9,1,350,#VALUE!,#VALUE!
+gi257471027,MUC4,"Mucin 4, tracheobronchial",Molecular function unknown,0.17,1,542,1,5412,#VALUE!,#VALUE!
+gi139948432,MXRA5,Matrix-remodelling associated 5,Molecular function unknown,0.32,1,312,1,2828,#VALUE!,#VALUE!
+gi4557779,MYOC,"Myocilin, trabecular meshwork inducible glucocorticoid response",Motor activity,11.31,4,56.9,4,504,#VALUE!,#VALUE!
+gi31742492,N4BP2,NEDD4 binding protein 2,DNA repair protein,0.4,1,198.7,1,1770,#VALUE!,#VALUE!
+gi66346698,NAGLU,"N-acetylglucosaminidase, alpha- (Sanfilippodisease IIIB)",Hydrolase activity,9.15,5,82.2,9,743,#VALUE!,#VALUE!
+gi323276677,NBL1,"Neuroblastoma, suppression of tumorigenicity 1",Protein binding,9.94,2,19.4,5,181,#VALUE!,#VALUE!
+gi336285443,NCAM1,Neural cell adhesion molecule 1,Cell adhesion molecule activity,3.17,2,80.3,3,726,#VALUE!,#VALUE!
+gi114520609,NEDD4,"Neural precursor cell expressed,developmentally down-regulated 4",Ubiquitin-specific protease activity,2.11,1,104.2,1,900,#VALUE!,#VALUE!
+gi290656011,NEO1,Neogenin homolog 1 (chicken),Receptor activity,1.49,2,154.2,3,1408,#VALUE!,#VALUE!
+gi219802034,NFRKB,Nuclear factor related to kappaB binding protein,Transcription factor activity,1.77,1,138.9,1,1299,#VALUE!,#VALUE!
+gi144953895,NID2,Nidogen 2 (osteonidogen),Extracellular matrix structural constituent,5.6,5,151.2,12,1375,#VALUE!,#VALUE!
+gi148833508,NOTCH1,"Notch homolog 1, translocation-associated ",Transcription regulator activity,0.31,1,272.3,1,1996,#VALUE!,#VALUE!
+gi5453678,NPC2,"Niemann-Pick disease, type C2",Transporter activity,21.19,2,16.6,6,151,#VALUE!,#VALUE!
+gi158937236,NPEPPS,Aminopeptidase puromycin sensitive,Aminopeptidase activity,1.2,1,103.2,4,919,#VALUE!,#VALUE!
+gi66864913,NRP1,Neuropilin 1,Receptor activity,10.18,4,68.3,13,609,#VALUE!,#VALUE!
+gi20070228,NUCB1,Nucleobindin 1,Calcium ion binding,6.29,2,53.8,3,461,#VALUE!,#VALUE!
+gi30425438,OAF,Out at first protein homolog,Molecular function unknown,7.33,2,30.7,5,273,#VALUE!,#VALUE!
+gi14916498,OGN,"Osteoglycin (osteoinductive factor, mimecan)",Growth factor activity,26.85,8,33.9,17,298,#VALUE!,#VALUE!
+gi17136143,OLFM1,Olfactomedin 1,Molecular function unknown,4.93,2,54.1,5,467,#VALUE!,#VALUE!
+gi4826876,OMD,Osteomodulin,Cell adhesion molecule activity,2.38,1,49.5,1,421,#VALUE!,#VALUE!
+gi167857790,ORM1,Orosomucoid 1,Defense/immunity protein activity,50.25,11,23.5,2052,201,#VALUE!,#VALUE!
+gi4505529,ORM2,Orosomucoid 2,Defense/immunity protein activity,57.71,10,23.6,1025,201,#VALUE!,#VALUE!
+gi270288820,OSMR,Oncostatin M receptor,Transmembrane receptor activity,2.63,1,39.5,1,342,#VALUE!,#VALUE!
+gi194306543,OXR1,Oxidation resistance 1,Molecular function unknown,0.72,1,93.7,1,839,#VALUE!,#VALUE!
+gi20070125,P4HB,"Procollagen-proline, 2-oxoglutarate4-dioxygenase (proline 4-hydroxylase), beta polypeptide (protein disulfide isomerase-associated 1)",Isomerase activity,1.57,1,57.1,1,508,#VALUE!,#VALUE!
+gi62422554,PAK4,p21(CDKN1A)-activated kinase 4,Cytoskeletal protein binding,1.35,1,64,1,591,#VALUE!,#VALUE!
+gi21070980,PAM,Peptidylglycine alpha-amidating monooxygenase,Catalytic activity,4.04,3,96.2,5,866,#VALUE!,#VALUE!
+gi31543380,PARK7,"Parkinson disease (autosomal recessive, earlyonset) 7",RNA binding,3.7,1,19.9,1,189,#VALUE!,#VALUE!
+gi119943100,PCCB,"Propionyl Coenzyme A carboxylase, betapolypeptide",Ligase activity,4.64,1,58.2,1,539,#VALUE!,#VALUE!
+gi94538350,PCDH17,Protocadherin 17,Cell adhesion molecule activity,1.73,1,126.2,2,1159,#VALUE!,#VALUE!
+gi157653329,PCOLCE,Procollagen C-endopeptidase enhancer,Extracellular matrix structural constituent,55.68,20,47.9,178,449,#VALUE!,#VALUE!
+gi31317307,PCSK9,Proprotein convertase subtilisin/kexin type 9,Aminopeptidase activity,2.17,1,74.2,2,692,#VALUE!,#VALUE!
+gi166795301,PCYOX1,Prenylcysteine oxidase 1,Catalytic activity,20.79,9,56.6,16,505,#VALUE!,#VALUE!
+gi308387374,PDE4D,"Phosphodiesterase 4D, cAMP-specific(phosphodiesterase E3 dunce homolog, Drosophila)",Phosphoric diester hydrolase activity,1.07,1,84.4,1,745,#VALUE!,#VALUE!
+gi341823698,PDE8A,Phosphodiesterase 8A,Phosphoric diester hydrolase activity,2.77,1,86,3,757,#VALUE!,#VALUE!
+gi5453872,PDGFRL,Platelet-derived growth factor receptor-like,Receptor activity,5.07,1,41.8,1,375,#VALUE!,#VALUE!
+gi148368962,PEAK1,NKF3 kinase family member,-,0.34,1,193,1,1746,#VALUE!,#VALUE!
+gi4505621,PEBP1,Prostatic binding protein,Protease inhibitor activity,7.49,1,21,1,187,#VALUE!,#VALUE!
+gi116812622,PEBP4,Phosphatidylethanolamine-binding protein 4,Molecular function unknown,22.03,4,25.7,9,227,#VALUE!,#VALUE!
+gi260593665,PEPD,Peptidase D,Peptidase activity,20.28,8,47.2,11,429,#VALUE!,#VALUE!
+gi4826898,PFN1,Profilin 1,Cytoskeletal protein binding,30,3,15,4,140,#VALUE!,#VALUE!
+gi4505753,PGAM1,Phosphoglycerate mutase 1 (brain),Catalytic activity,7.09,1,28.8,1,254,#VALUE!,#VALUE!
+gi4505763,PGK1,Phosphoglycerate kinase 1,Catalytic activity,22.54,6,44.6,20,417,#VALUE!,#VALUE!
+gi4827036,PGLYRP1,Peptidoglycan recognition protein 1,Molecular function unknown,8.16,1,21.7,1,196,#VALUE!,#VALUE!
+gi156616294,PGLYRP2,Peptidoglycan recognition protein 2,Receptor activity,54.34,17,62.2,396,576,#VALUE!,#VALUE!
+gi12707580,PHOX2B,Paired-like homeobox 2b,Transcription factor activity,5.1,1,31.6,3,314,#VALUE!,#VALUE!
+gi312434019,PI16,Protease inhibitor 16,Protease inhibitor activity,13.61,5,49.4,22,463,#VALUE!,#VALUE!
+gi22538450,PIGQ,"Phosphatidylinositol glycan, class Q",Transferase activity,3.79,1,65.3,1,581,#VALUE!,#VALUE!
+gi31377806,PIGR,Polymeric immunoglobulin receptor,Receptor activity,3.66,2,83.2,4,764,#VALUE!,#VALUE!
+gi332164777,PKM2,"Pyruvate kinase, muscle",-,5.25,2,49.9,4,457,#VALUE!,#VALUE!
+gi189095271,PLA2G7,"Phospholipase A2, group VII(platelet-activating factor acetylhydrolase, plasma)",Phospholipase activity,6.8,2,50,11,441,#VALUE!,#VALUE!
+gi195972873,PLCH1,Phospholipase C-like 3,Molecular function unknown,0.7,1,114.4,1,1002,#VALUE!,#VALUE!
+gi4505881,PLG,Plasminogen,Peptidase activity,75.8,63,90.5,1024,810,#VALUE!,#VALUE!
+gi255958306,PLIN3,Mannose-6-phosphate receptor binding protein1,Transporter activity,3.32,1,45.8,1,422,#VALUE!,#VALUE!
+gi5453914,PLTP,Phospholipid transfer protein,Transporter activity,38.74,17,54.7,120,493,#VALUE!,#VALUE!
+gi40255005,PLXDC2,Plexin domain containing 2,Receptor activity,6.62,3,59.5,12,529,#VALUE!,#VALUE!
+gi40254442,PLXNB1,Plexin B1,Receptor activity,0.89,1,232.2,2,2135,#VALUE!,#VALUE!
+gi212286172,POLR1B,"Polymerase (RNA) I polypeptide B, 128kDa",DNA-directed RNA polymerase activity,1.11,1,121.9,1,1079,#VALUE!,#VALUE!
+gi19923106,PON1,Paraoxonase 1,Hydrolase activity,72.96,16,39.7,423,355,#VALUE!,#VALUE!
+gi29788996,PON3,Paraoxonase 3,Hydrolase activity,24.01,6,39.6,46,354,#VALUE!,#VALUE!
+gi209863011,POSTN,"Periostin, osteoblast specific factor isoform 3",Cell adhesion molecule activity,43.79,3,87.2,97,781,#VALUE!,#VALUE!
+gi209863034,POSTN,"Periostin, osteoblast specific factor isoform 4",Cell adhesion molecule activity,41.94,1,83.8,91,751,#VALUE!,#VALUE!
+gi134133226,POTEE,"POTE ankyrin domain family, member E",Molecular function unknown,10.05,1,121.3,101,1075,#VALUE!,#VALUE!
+gi10863927,PPIA,Peptidylprolyl isomerase A (cyclophilin A),Isomerase activity,32.12,5,18,5,165,#VALUE!,#VALUE!
+gi4758950,PPIB,Peptidylprolyl isomerase B (cyclophilin B),Chaperone activity,3.7,1,23.7,1,216,#VALUE!,#VALUE!
+gi4505991,PPIC,Peptidylprolyl isomerase C (cyclophilin C),Chaperone activity,9.91,2,22.7,12,212,#VALUE!,#VALUE!
+gi14150227,PRAC,Prostate cancer susceptibility candidate,Molecular function unknown,36.84,1,6,1,57,#VALUE!,#VALUE!
+gi223633957,PRAP1,Proline-rich acidic protein 1,Molecular function unknown,31.69,2,16.3,4,142,#VALUE!,#VALUE!
+gi32455266,PRDX1,Peroxiredoxin 1,Peroxidase activity,10.55,2,22.1,2,199,#VALUE!,#VALUE!
+gi4758638,PRDX6,Peroxiredoxin 6,Peroxidase activity,4.02,1,25,1,224,#VALUE!,#VALUE!
+gi46276889,PRG2,"Proteoglycan 2, bone marrow (natural killer cellactivator, eosinophil granule major basic protein)",Molecular function unknown,20.27,3,25.2,4,222,#VALUE!,#VALUE!
+gi67190163,PRG4,Proteoglycan 4,Cell adhesion molecule activity,23.29,28,151,217,1404,#VALUE!,#VALUE!
+gi4506115,PROC,Protein C (inactivator of coagulation factors Vaand VIIIa),Peptidase activity,15.62,7,52,38,461,#VALUE!,#VALUE!
+gi34335272,PROCR,"Protein C receptor, endothelial (EPCR)",Antigen binding,20.59,4,26.7,34,238,#VALUE!,#VALUE!
+gi192447438,PROS1,Protein S (alpha),Protease inhibitor activity,46.45,28,75.1,289,676,#VALUE!,#VALUE!
+gi4506121,PROZ,"Protein Z, vitamin K-dependent plasmaglycoprotein",Molecular function unknown,24.25,7,44.7,12,400,#VALUE!,#VALUE!
+gi156938331,PRPF39,PRP39 pre-mRNA processing factor 39 homolog(yeast),Molecular function unknown,2.84,1,78.4,1,669,#VALUE!,#VALUE!
+gi149192855,PRRC2B,Proline-rich coiled-coil 2B,-,0.45,1,242.8,1,2229,#VALUE!,#VALUE!
+gi4506147,PRSS2,"Protease, serine, 2 (trypsin 2)",Serine-type peptidase activity,4.05,1,26.5,1,247,#VALUE!,#VALUE!
+gi308193325,PRSS3,"Protease, serine, 3 (mesotrypsin)",Serine-type peptidase activity,5.42,1,25.9,8,240,#VALUE!,#VALUE!
+gi83281200,PRTG,Protogenin homolog (Gallus gallus),Molecular function unknown,0.96,1,127,2,1150,#VALUE!,#VALUE!
+gi23110942,PSMA5,"Proteasome (prosome, macropain) subunit, alphatype, 5",Ubiquitin-specific protease activity,12.86,2,26.4,4,241,#VALUE!,#VALUE!
+gi23110944,PSMA6,"Proteasome (prosome, macropain) subunit, alphatype, 6",Ubiquitin-specific protease activity,4.88,1,27.4,1,246,#VALUE!,#VALUE!
+gi4506193,PSMB1,"Proteasome (prosome, macropain) subunit, betatype, 1",Ubiquitin-specific protease activity,5.81,1,26.5,1,241,#VALUE!,#VALUE!
+gi315139004,PSMB2,"Proteasome (prosome, macropain) subunit, betatype, 2",Ubiquitin-specific protease activity,13.1,1,9.6,1,84,#VALUE!,#VALUE!
+gi22538467,PSMB4,"Proteasome (prosome, macropain) subunit, betatype, 4",Ubiquitin-specific protease activity,5.68,1,29.2,1,264,#VALUE!,#VALUE!
+gi4758970,PSMB8,"Proteasome (prosome, macropain) subunit, betatype, 8 (large multifunctional protease 7)",Ubiquitin-specific protease activity,2.94,1,29.8,1,272,#VALUE!,#VALUE!
+gi32171249,PTGDS,Prostaglandin D2 synthase 21kDa (brain),Ligase activity,36.32,4,21,50,190,#VALUE!,#VALUE!
+gi109633039,PTPRF,"Protein tyrosine phosphatase, receptor type, F",Receptor signaling protein tyrosine phosphatase activity,0.79,1,211.6,1,1898,#VALUE!,#VALUE!
+gi194097398,PTPRG,"Protein tyrosine phosphatase, receptor type, G",Receptor signaling protein tyrosine phosphatase activity,3.74,4,161.9,7,1445,#VALUE!,#VALUE!
+gi148728160,PTPRJ,"Protein tyrosine phosphatase, receptor type, J",Receptor signaling protein tyrosine phosphatase activity,8.35,3,57.2,7,539,#VALUE!,#VALUE!
+gi18860902,PTPRK,"Protein tyrosine phosphatase, receptor type, K",Receptor signaling protein tyrosine kinase activity,0.42,1,162.1,1,1440,#VALUE!,#VALUE!
+gi104487297,PTPRS,"Protein tyrosine phosphatase, receptor type, S",Receptor signaling protein tyrosine phosphatase activity,0.63,1,212.4,2,1910,#VALUE!,#VALUE!
+gi209413730,PVR,Poliovirus receptor,Receptor activity,3.3,1,39.3,1,364,#VALUE!,#VALUE!
+gi162809334,PZP,Pregnancy-zone protein,Protease inhibitor activity,27.6,21,163.8,1237,1482,#VALUE!,#VALUE!
+gi13325075,QSOX1,Quiescin Q6,Molecular function unknown,38.69,24,82.5,73,747,#VALUE!,#VALUE!
+gi13569962,RAB1B,"RAB1B, member RAS oncogene family",GTPase activity,13.43,2,22.2,2,201,#VALUE!,#VALUE!
+gi19924125,RAD51L3,RAD51-like 3 (S. cerevisiae),DNA binding,7.41,1,23.3,1,216,#VALUE!,#VALUE!
+gi4506427,RARRES2,Retinoic acid receptor responder (tazaroteneinduced) 2,Receptor activity,21.47,3,18.6,6,163,#VALUE!,#VALUE!
+gi55743122,RBP4,"Retinol binding protein 4, plasma",Transporter activity,77.11,13,23,203,201,#VALUE!,#VALUE!
+gi29725633,REG1A,"Regenerating islet-derived 1 alpha (pancreaticstone protein, pancreatic thread protein)",Extracellular matrix structural constituent,23.49,3,18.7,3,166,#VALUE!,#VALUE!
+gi4505605,REG3A,Regenerating islet-derived 3 alpha,Growth factor activity,13.14,1,19.4,1,175,#VALUE!,#VALUE!
+gi118197270,RGPD6,RANBP2-like and GRIP domain containing 6,Binding,0.77,1,103.3,1,904,#VALUE!,#VALUE!
+gi270288802,RIMS1,Regulating synaptic membrane exocytosis 1,Transporter activity,1.18,1,85.1,1,760,#VALUE!,#VALUE!
+gi38201682,RNASE1,"Ribonuclease, RNase A family, 1 (pancreatic)",RNA binding Ribonuclease activity,39.74,4,17.6,9,156,#VALUE!,#VALUE!
+gi37577172,RNASE4,"Ribonuclease, RNase A family, 4",Ribonuclease activity,21.09,2,16.8,5,147,#VALUE!,#VALUE!
+gi5231228,RNASET2,Ribonuclease T2,Ribonuclease activity,3.91,1,29.5,1,256,#VALUE!,#VALUE!
+gi17511435,ROBO4,"Roundabout homolog 4, magic roundabout(Drosophila)",Cell adhesion molecule activity,1.59,1,107.4,2,1007,#VALUE!,#VALUE!
+gi4885583,ROCK1,"Rho-associated, coiled-coil containing proteinkinase 1",Protein serine/threonine kinase activity,0.74,1,158.1,1,1354,#VALUE!,#VALUE!
+gi4506591,RPE65,Retinal pigment epithelium-specific protein65kDa,Transporter activity,1.88,1,60.9,1,533,#VALUE!,#VALUE!
+gi15431288,RPL10A,Ribosomal protein L10a,Structural constituent of ribosome,5.99,1,24.8,3,217,#VALUE!,#VALUE!
+gi4506663,RPL8,Ribosomal protein L8,Structural constituent of ribosome,2.33,1,28,2,257,#VALUE!,#VALUE!
+gi4759050,RPS6KA3,"Ribosomal protein S6 kinase, 90kDa,polypeptide 3",Protein serine/threonine kinase activity,1.22,1,83.7,6,740,#VALUE!,#VALUE!
+gi14141193,RPS9,Ribosomal protein S9,Structural constituent of ribosome,6.19,1,22.6,1,194,#VALUE!,#VALUE!
+gi13899247,RTBDN,Retbindin,Molecular function unknown,8.05,1,28.1,2,261,#VALUE!,#VALUE!
+gi5902016,RTN4,Reticulon 4,Protein binding,2.51,1,22.4,2,199,#VALUE!,#VALUE!
+gi21614544,S100A8,S100 calcium binding protein A8 (calgranulinA),Calcium ion binding,11.83,1,10.8,3,93,#VALUE!,#VALUE!
+gi4506773,S100A9,S100 calcium binding protein A9 (calgranulinB),Calcium ion binding,24.56,2,13.2,8,114,#VALUE!,#VALUE!
+gi40316910,SAA1,Serum amyloid A1,Transporter activity,52.46,4,13.5,21,122,#VALUE!,#VALUE!
+gi315075331,SAA2-SAA4,SAA2-SAA4 readthrough,-,30.29,5,23.3,60,208,#VALUE!,#VALUE!
+gi239582751,SAMD4A,Sterile alpha motif domain containing 4,Molecular function unknown,6.38,1,37.3,1,345,#VALUE!,#VALUE!
+gi260436922,SBSN,Suprabasin,Molecular function unknown,15.25,2,60.5,5,590,#VALUE!,#VALUE!
+gi68160947,SCG2,Secretogranin II (chromogranin C),Molecular function unknown,0.81,1,70.9,1,617,#VALUE!,#VALUE!
+gi4507809,SCGB1A1,"Secretoglobin, family 1A, member 1(uteroglobin)",Cytokine activity,10.99,1,10,1,91,#VALUE!,#VALUE!
+gi40807363,SDR16C5,"Short chain dehydrogenase/reductase family 16C, member 5",Catalytic activity,6.15,1,34.1,1,309,#VALUE!,#VALUE!
+gi16306550,SELENBP1,Selenium binding protein 1,Molecular function unknown,4.45,2,52.4,2,472,#VALUE!,#VALUE!
+gi262206315,SELL,Selectin L (lymphocyte adhesion molecule 1),Cell adhesion molecule activity,16.36,5,43.6,26,385,#VALUE!,#VALUE!
+gi148277018,SEPP1,"Selenoprotein P, plasma, 1",Peroxidase activity,16.01,5,43.2,27,381,#VALUE!,#VALUE!
+gi189163528,SERPINA1,"Serine (or cysteine) proteinase inhibitor,clade A (alpha-1 antiproteinase, antitrypsin), member 1",Protease inhibitor activity,60.53,27,46.7,1039,418,#VALUE!,#VALUE!
+gi7705879,SERPINA10,"Serine (or cysteine) proteinase inhibitor,clade A (alpha-1 antiproteinase, antitrypsin), member 10",Protease inhibitor activity,28.38,10,50.7,26,444,#VALUE!,#VALUE!
+gi50659080,SERPINA3,"Serine (or cysteine) proteinase inhibitor,clade A (alpha-1 antiproteinase, antitrypsin), member 3",Protease inhibitor activity,63.36,33,47.6,1768,423,#VALUE!,#VALUE!
+gi21361302,SERPINA4,"Serine (or cysteine) proteinase inhibitor,clade A (alpha-1 antiproteinase, antitrypsin), member 4",Protease inhibitor activity,66.74,26,48.5,417,427,#VALUE!,#VALUE!
+gi194018472,SERPINA5,"Serine (or cysteine) proteinase inhibitor,clade A (alpha-1 antiproteinase, antitrypsin), member 5",Protease inhibitor activity,32.51,14,45.6,131,406,#VALUE!,#VALUE!
+gi73858564,SERPINA6,"Serine (or cysteine) proteinase inhibitor,clade A (alpha-1 antiproteinase, antitrypsin), member 6",Transporter activity,30.37,8,45.1,99,405,#VALUE!,#VALUE!
+gi205277441,SERPINA7,"Serine (or cysteine) proteinase inhibitor,clade A (alpha-1 antiproteinase, antitrypsin), member 7",Protease inhibitor activity,55.9,20,46.3,216,415,#VALUE!,#VALUE!
+gi13489087,SERPINB1,"Serine (or cysteine) proteinase inhibitor,clade B (ovalbumin), member 1",Protease inhibitor activity,5.01,1,42.7,2,379,#VALUE!,#VALUE!
+gi41152086,SERPINB6,"Serine (or cysteine) proteinase inhibitor,clade B (ovalbumin), member 6",Protease inhibitor activity,9.31,2,42.6,3,376,#VALUE!,#VALUE!
+gi4502261,SERPINC1,"Serine (or cysteine) proteinase inhibitor,clade C (antithrombin), member 1",Protease inhibitor activity,67.89,34,52.6,1427,464,#VALUE!,#VALUE!
+gi73858566,SERPIND1,"Serine (or cysteine) proteinase inhibitor,clade D (heparin cofactor), member 1",Protease inhibitor activity,59.52,27,57,587,499,#VALUE!,#VALUE!
+gi39725934,SERPINF1,"Serine (or cysteine) proteinase inhibitor,clade F (alpha-2 antiplasmin, pigment epithelium derived factor), member 1",Serine-type peptidase activity,57.66,25,46.3,385,418,#VALUE!,#VALUE!
+gi115583663,SERPINF2,"Serine (or cysteine) proteinase inhibitor,clade F (alpha-2 antiplasmin, pigment epithelium derived factor), member 2",Protease inhibitor activity,56.42,22,54.5,377,491,#VALUE!,#VALUE!
+gi73858568,SERPING1,"Serine (or cysteine) proteinase inhibitor,clade G (C1 inhibitor), member 1, (angioedema, hereditary)",Protease inhibitor activity,44.2,26,55.1,1507,500,#VALUE!,#VALUE!
+gi5453886,SERPINI2,"Serine (or cysteine) proteinase inhibitor,clade I (pancpin), member 2",Protease inhibitor activity,2.22,1,46.1,1,405,#VALUE!,#VALUE!
+gi170784838,SFRP4,Secreted frizzled-related protein 4,Receptor signaling protein activity,3.18,1,39.8,1,346,#VALUE!,#VALUE!
+gi7382460,SHBG,Sex hormone-binding globulin,Transporter activity,62.44,16,43.8,167,402,#VALUE!,#VALUE!
+gi4506939,SHH,Sonic hedgehog homolog (Drosophila),Receptor binding,2.81,1,49.6,1,462,#VALUE!,#VALUE!
+gi203098098,SHROOM3,Shroom family member 3,Receptor signaling complex scaffold activity,0.3,1,216.7,1,1996,#VALUE!,#VALUE!
+gi38569491,SIK3,SIK family kinase 3,Molecular function unknown,1.35,1,139.9,1,1263,#VALUE!,#VALUE!
+gi7662126,SIPA1L1,Signal-induced proliferation-associated 1like 1,GTPase activator activity,1.11,1,199.9,1,1804,#VALUE!,#VALUE!
+gi336594532,SLC14A2,"Solute carrier family 14 (urea transporter),member 2",Transporter activity,0.65,1,101.1,1,920,#VALUE!,#VALUE!
+gi61744483,SLC3A2,"Solute carrier family 3 (activators of dibasicand neutral amino acid transport), member 2",Auxiliary transport protein activity,8.13,3,57.9,5,529,#VALUE!,#VALUE!
+gi4507065,SLPI,Secretory leukocyte protease inhibitor (antileukoproteinase),Protease inhibitor activity,11.36,1,14.3,1,132,#VALUE!,#VALUE!
+gi67782305,SOD2,"Superoxide dismutase 2, mitochondrial",Superoxide dismutase activity,16.67,3,24.7,3,222,#VALUE!,#VALUE!
+gi118582275,SOD3,"Superoxide dismutase 3, extracellular",Superoxide dismutase activity,54.17,7,25.8,72,240,#VALUE!,#VALUE!
+gi155030230,SORBS3,Sorbin and SH3 domain containing 3,Cell adhesion molecule activity,0.75,1,75.3,2,671,#VALUE!,#VALUE!
+gi5902112,SOX30,SRY (sex determining region Y)-box 30,Transcription factor activity,2,1,54.3,4,501,#VALUE!,#VALUE!
+gi27436920,SPAG9,Sperm associated antigen 9,Molecular function unknown,0.46,1,144.6,1,1307,#VALUE!,#VALUE!
+gi4507171,SPARC,"Secreted protein, acidic, cysteine-rich (osteonectin)",Extracellular matrix structural constituent,23.76,6,34.6,10,303,#VALUE!,#VALUE!
+gi190341024,SPARCL1,"SPARC-like 1 (mast9, hevin)",Calcium ion binding,12.8,6,75.2,15,664,#VALUE!,#VALUE!
+gi217416352,SPHKAP,"SPHK1 interactor, AKAP domain containing",Molecular function unknown,0.42,1,183.3,1,1671,#VALUE!,#VALUE!
+gi6912682,SPON2,"Spondin 2, extracellular matrix protein",Extracellular matrix structural constituent,2.72,1,35.7,1,331,#VALUE!,#VALUE!
+gi5902118,SPP2,"Secreted phosphoprotein 2, 24kDa",Protease inhibitor activity,11.37,2,24.3,3,211,#VALUE!,#VALUE!
+gi67782321,SPTB,"Spectrin, beta, erythrocytic (includes spherocytosis, clinical type I)",Structural molecule activity,0.86,1,267.7,2,2328,#VALUE!,#VALUE!
+gi170016061,SPTBN5,"Spectrin, beta, non-erythrocytic 5",Cytoskeletal protein binding,0.38,1,412.8,2,3639,#VALUE!,#VALUE!
+gi10835067,SSB,Sjogren syndrome antigen B (autoantigen La),RNA binding,1.72,1,46.8,3,408,#VALUE!,#VALUE!
+gi222352122,SSC5D,Scavenger receptor cysteine rich domain containing (5 domains),-,9.35,9,165.6,22,1573,#VALUE!,#VALUE!
+gi261878473,SSX2IP,"Synovial sarcoma, X breakpoint 2 interactingprotein",Cell adhesion molecule activity,1.36,1,68.2,1,587,#VALUE!,#VALUE!
+gi4507267,STC2,Stanniocalcin 2,Hormone activity,3.97,1,33.2,2,302,#VALUE!,#VALUE!
+gi71834868,SUN3,Sad1 and UNC84 domain containing 3,Molecular function unknown,1.96,1,40.5,7,357,#VALUE!,#VALUE!
+gi148886654,SVEP1,"Sushi, von Willebrand factor type A, EGF and pentraxin domain containing 1",Cell adhesion molecule activity,0.81,2,389.9,3,3571,#VALUE!,#VALUE!
+gi19924097,SYN1,Synapsin I,Transporter activity,1.35,1,70,2,669,#VALUE!,#VALUE!
+gi112382239,SYNM,Desmuslin,Structural constituent of cytoskeleton,1.52,1,140.1,1,1253,#VALUE!,#VALUE!
+gi15011902,SYTL2,Synaptotagmin-like 2,Molecular function unknown,0.66,1,102.5,1,910,#VALUE!,#VALUE!
+gi260656022,TADA2A,"Transcriptional adaptor 2 (ADA2 homolog,yeast)-like",Transcription regulator activity,4.51,1,51.5,1,443,#VALUE!,#VALUE!
+gi48255905,TAGLN,Transgelin,Cytoskeletal protein binding,6.97,1,22.6,1,201,#VALUE!,#VALUE!
+gi315139026,TAOK1,TAO kinase 1,Protein serine/threonine kinase activity,1.76,1,97.5,1,853,#VALUE!,#VALUE!
+gi50658061,TBC1D1,"TBC1 (tre-2/USP6, BUB2, cdc16) domain family,member 1",Molecular function unknown,0.94,1,133,9,1168,#VALUE!,#VALUE!
+gi38570103,TBC1D8B,"TBC1 domain family, member 8B (with GRAM domain)",Molecular function unknown,3.48,1,72.6,1,632,#VALUE!,#VALUE!
+gi40217812,TBRG4,Transforming growth factor beta regulator 4,Molecular function unknown,0.95,1,70.7,1,631,#VALUE!,#VALUE!
+gi296080704,TCN2,Transcobalamin II; macrocytic anemia,Transporter activity,3.75,1,44.4,1,400,#VALUE!,#VALUE!
+gi8924256,TCP11,T-complex 11 (mouse),Receptor activity,3.85,1,49.3,1,441,#VALUE!,#VALUE!
+gi133778961,TEX15,Testis expressed sequence 15,Molecular function unknown,0.32,1,315.1,1,2789,#VALUE!,#VALUE!
+gi4557871,TF,Transferrin,Transporter activity,54.44,41,77,537,698,#VALUE!,#VALUE!
+gi73760409,TFPI,Tissue factor pathway inhibitor(lipoprotein-associated coagulation inhibitor),Protease inhibitor activity,3.19,1,28.6,2,251,#VALUE!,#VALUE!
+gi189458817,TFRC,"Transferrin receptor (p90, CD71)",Auxiliary transport protein activity,5.79,4,84.8,7,760,#VALUE!,#VALUE!
+gi4507467,TGFBI,"Transforming growth factor, beta-induced, 68kDa",Receptor binding,42.61,24,74.6,116,683,#VALUE!,#VALUE!
+gi307574634,TGFBR3,"Transforming growth factor, beta receptor III(betaglycan, 300kDa)",Receptor activity,2,1,93.4,2,850,#VALUE!,#VALUE!
+gi40317626,THBS1,Thrombospondin 1,Extracellular matrix structural constituent,5.04,4,129.3,5,1170,#VALUE!,#VALUE!
+gi6005902,THBS3,Thrombospondin 3,Extracellular matrix structural constituent,4.39,2,104.1,9,956,#VALUE!,#VALUE!
+gi31543806,THBS4,Thrombospondin 4,Extracellular matrix structural constituent,31.22,16,105.8,115,961,#VALUE!,#VALUE!
+gi19923362,THY1,Thy-1 cell surface antigen,Molecular function unknown Protein binding,6.21,1,17.9,1,161,#VALUE!,#VALUE!
+gi226498466,TIMD4,T-cell immunoglobulin and mucin domaincontaining 4,Molecular function unknown,3.14,1,38.5,1,350,#VALUE!,#VALUE!
+gi4507509,TIMP1,"Tissue inhibitor of metalloproteinase 1(erythroid potentiating activity, collagenase inhibitor)",Extracellular matrix structural constituent,47.83,7,23.2,68,207,#VALUE!,#VALUE!
+gi4507511,TIMP2,Tissue inhibitor of metalloproteinase 2,Extracellular matrix structural constituent,23.64,5,24.4,20,220,#VALUE!,#VALUE!
+gi262399371,TMEM201,Transmembrane protein 201,Molecular function unknown,1.05,1,72.2,1,666,#VALUE!,#VALUE!
+gi11056061,TMSB4X,"Thymosin, beta 4, X-linked",Cytoskeletal protein binding,25,1,5,2,44,#VALUE!,#VALUE!
+gi153946395,TNC,Tenascin C (hexabrachion),Cell adhesion molecule activity,15.13,23,240.7,55,2201,#VALUE!,#VALUE!
+gi26051243,TNFAIP6,"Tumor necrosis factor, alpha-induced protein6",Extracellular matrix structural constituent,5.05,1,31.2,1,277,#VALUE!,#VALUE!
+gi157738639,TNS4,Tensin 4,Molecular function unknown,1.26,1,76.7,1,715,#VALUE!,#VALUE!
+gi188528648,TNXB,Tenascin XB,Extracellular matrix structural constituent,6.67,17,457.9,38,4242,#VALUE!,#VALUE!
+gi4507645,TPI1,Triosephosphate isomerase 1,Isomerase activity,27.71,5,26.7,7,249,#VALUE!,#VALUE!
+gi186972143,TPP2,Tripeptidyl peptidase II,Aminopeptidase activity,1.68,1,138.3,1,1249,#VALUE!,#VALUE!
+gi22027630,TRAF6,TNF receptor-associated factor 6,Signal transducer activity,4.21,1,59.5,1,522,#VALUE!,#VALUE!
+gi6005920,TRH,Thyrotropin-releasing hormone,Peptide hormone,2.07,1,27.4,3,242,#VALUE!,#VALUE!
+gi82617564,TRIM16L,Tripartite motif containing 16-like,Molecular function unknown,3.74,1,40.3,1,348,#VALUE!,#VALUE!
+gi336455091,TTC34,Tetratricopeptide repeat domain 34,-,1.41,1,60.9,1,566,#VALUE!,#VALUE!
+gi11068135,TTLL1,"Tubulin tyrosine ligase-like family, member 1",Molecular function unknown,1.89,1,49,4,423,#VALUE!,#VALUE!
+gi291045223,TTN,Titin,Structural molecule activity Kinase activity,0.04,1,2991.1,9,26926,#VALUE!,#VALUE!
+gi4507725,TTR,"Transthyretin (prealbumin, amyloidosis type I)",Transporter activity,77.55,16,15.9,589,147,#VALUE!,#VALUE!
+gi29826279,TUB,Tubby homolog (mouse),Transcription regulator activity,2.96,1,55.6,2,506,#VALUE!,#VALUE!
+gi301171345,TUBA8,"Tubulin, alpha 8",Cytoskeletal protein binding,12.01,3,42.9,5,383,#VALUE!,#VALUE!
+gi29788785,TUBB,"Tubulin, beta polypeptide",Structural constituent of cytoskeleton,13.51,4,49.6,18,444,#VALUE!,#VALUE!
+gi50592994,TXN,Thioredoxin,Catalytic activity,12.38,1,11.7,2,105,#VALUE!,#VALUE!
+gi224493972,TXNDC5,Thioredoxin domain containing 5,Oxidoreductase activity,2.78,1,36.2,1,324,#VALUE!,#VALUE!
+gi67191208,UBC,Ubiquitin C,Ubiquitin-specific protease activity,11.82,1,77,3,685,#VALUE!,#VALUE!
+gi19718762,UBE3A,"Ubiquitin protein ligase E3A (human papillomavirus E6-associated protein, Angelman syndrome)",Ubiquitin-specific protease activity,2.23,1,97.9,1,852,#VALUE!,#VALUE!
+gi28372497,UBR1,Ubiquitin protein ligase E3 component n-recognin1,Ubiquitin-specific protease activity,0.69,1,200.1,4,1749,#VALUE!,#VALUE!
+gi9910280,UGGT1,UDP-glucose ceramide glucosyltransferase-like1,Transferase activity,1.03,1,177.1,1,1555,#VALUE!,#VALUE!
+gi88702793,VASN,Vasorin,Growth factor binding,11.89,6,71.7,70,673,#VALUE!,#VALUE!
+gi18379349,VAT1,Vesicle amine transport protein 1 homolog (Tcalifornica),Transporter activity,8.65,2,41.9,3,393,#VALUE!,#VALUE!
+gi4507875,VCAM1,Vascular cell adhesion molecule 1,Cell adhesion molecule activity,21.24,14,81.2,34,739,#VALUE!,#VALUE!
+gi255918077,VCAN,Versican,Extracellular matrix structural constituent,7.39,13,264.9,99,2409,#VALUE!,#VALUE!
+gi62414289,VIM,Vimentin,Structural constituent of cytoskeleton,4.94,2,53.6,3,466,#VALUE!,#VALUE!
+gi296434251,VSIG4,V-set and immunoglobulin domain containing 4,Receptor activity,22.12,4,35.5,12,321,#VALUE!,#VALUE!
+gi88853069,VTN,"Vitronectin (serum spreading factor, somatomedinB, complement S-protein)",Extracellular matrix structural constituent,37.45,13,54.3,500,478,#VALUE!,#VALUE!
+gi47419918,WARS,Tryptophanyl-tRNA synthetase,Ligase activity,3.72,1,48.8,2,430,#VALUE!,#VALUE!
+gi223005857,WDR67,WD repeat domain 67,Molecular function unknown,1.13,1,112.6,1,970,#VALUE!,#VALUE!
+gi282165776,WDR78,WD repeat domain 78,Molecular function unknown,4.04,1,61,1,545,#VALUE!,#VALUE!
+gi22748937,XPO5,Exportin 5,Transporter activity,1.41,1,136.2,2,1204,#VALUE!,#VALUE!
+gi290543591,YTHDF2,"YTH domain family, member 2",Molecular function unknown,2.84,1,56.8,2,529,#VALUE!,#VALUE!
+gi5803225,YWHAE,"Tyrosine 3-monooxygenase/tryptophan5-monooxygenase activation protein, epsilon polypeptide",Receptor signaling complex scaffold activity,11.37,1,29.2,10,255,#VALUE!,#VALUE!
+gi4507953,YWHAZ,"Tyrosine 3-monooxygenase/tryptophan5-monooxygenase activation protein, zeta polypeptide",Receptor signaling complex scaffold activity,24.49,3,27.7,14,245,#VALUE!,#VALUE!
+gi27881494,ZAN,Zonadhesin,Cell adhesion molecule activity,0.66,1,295.3,1,2721,#VALUE!,#VALUE!
+gi222831664,ZNF184,Zinc finger protein 184 (Kruppel-like),Transcription regulator activity,2.8,1,86.1,1,751,#VALUE!,#VALUE!
+gi22749235,ZNF709,Zinc finger protein 709,Transcription factor activity,3.12,1,74.6,1,641,#VALUE!,#VALUE!
+gi73747881,ZZEF1,"Zinc finger, ZZ-type with EF hand domain 1",Molecular function unknown,0.24,1,330.9,5,2961,#VALUE!,#VALUE!

@@ -1,0 +1,109 @@
+"SwissProt 
+accession #",SwissProt ID,Phenyx Score,#valid peptides,% Cov,Description
+P08603,CFAH_HUMAN,"425,4",100,39.00%,Complement factor H 
+P00751,CFAB_HUMAN,"258,0",78,35.00%,Complement factor B Bb fragment
+P02790,HEMO_HUMAN,"250,9",162,57.00%,Hemopexin 
+P06727,APOA4_HUMAN,"246,3",59,60.00%,Apolipoprotein A-IV 
+P01042,KNG1_HUMAN,"245,5",108,45.00%,Low molecular weight growth-promoting factor 
+P02774,VTDB_HUMAN,"244,3",76,49.00%,Vitamin D-binding protein 
+P04264,K2C1_HUMAN,"242,5",91,39.00%,"Keratin, type II cytoskeletal 1 "
+P01031,CO5_HUMAN,"224,0",41,14.00%,Complement C5 alpha' chain
+P02751,FINC_HUMAN,"222,9",42,16.00%,Ugl-Y3 
+P01008,ANT3_HUMAN,"221,9",83,52.00%,Antithrombin-III 
+P43652,AFAM_HUMAN,"216,7",62,30.00%,Afamin 
+P01011,AACT_HUMAN,"202,5",93,39.00%,Alpha-1-antichymotrypsin His-Pro-less 
+P05155,IC1_HUMAN,"172,8",76,30.00%,Plasma protease C1 inhibitor 
+Q14624,ITIH4_HUMAN,"165,6",71,20.00%,35 kDa inter-alpha-trypsin inhibitor heavy chain H4 
+P00734,THRB_HUMAN,"161,9",57,32.00%,Thrombin heavy chain 
+P02768,ALBU_HUMAN,"157,1",43,29.00%,Serum albumin 
+P02748,CO9_HUMAN,"155,1",34,29.00%,Complement component C9b 
+P04196,HRG_HUMAN,"154,1",61,34.00%,Histidine-rich glycoprotein 
+P02647,APOA1_HUMAN,"148,7",28,60.00%,Apolipoprotein A-I
+P25311,ZA2G_HUMAN,"147,3",35,49.00%,Zinc-alpha-2-glycoprotein 
+P19823,ITIH2_HUMAN,"144,9",42,23.00%,Inter-alpha-trypsin inhibitor heavy chain H2
+P36955,PEDF_HUMAN,"142,8",32,34.00%,Pigment epithelium-derived factor 
+P05156,CFAI_HUMAN,"138,7",23,26.00%,Complement factor I light chain 
+P13645,K1C10_HUMAN,"136,6",80,22.00%,"Keratin, type I cytoskeletal 10 "
+Q9NQ79,CRAC1_HUMAN,"130,3",40,24.00%,Cartilage acidic protein 1 
+P04217,A1BG_HUMAN,"130,2",46,32.00%,Alpha-1B-glycoprotein 
+P19827,ITIH1_HUMAN,"129,0",24,24.00%,Inter-alpha-trypsin inhibitor heavy chain H1 
+P02765,FETUA_HUMAN,"121,1",36,30.00%,Alpha-2-HS-glycoprotein chain B 
+P02749,APOH_HUMAN,"117,9",28,42.00%,Beta-2-glycoprotein 1 
+P05546,HEP2_HUMAN,"117,0",42,25.00%,Heparin cofactor 2 
+P04004,VTNC_HUMAN,"115,1",33,28.00%,Somatomedin-B 
+P35908,K22E_HUMAN,"111,2",68,24.00%,"Keratin, type II cytoskeletal 2 epidermal "
+P01019,ANGT_HUMAN,"109,5",21,22.00%,Angiotensin-3 
+P29622,KAIN_HUMAN,"95,7",26,25.00%,Kallistatin 
+P06396,GELS_HUMAN,"94,3",24,14.00%,Gelsolin 
+P08697,A2AP_HUMAN,"90,7",32,25.00%,Alpha-2-antiplasmin 
+P51884,LUM_HUMAN,"90,5",48,23.00%,Lumican 
+Q03591,FHR1_HUMAN,"86,8",25,34.00%,Complement factor H-related protein 1 
+P35858,ALS_HUMAN,"85,3",23,18.00%,Insulin-like growth factor-binding protein complex acid labile subunit 
+P00748,FA12_HUMAN,"84,7",17,19.00%,Coagulation factor XIIa light chain
+P10909,CLUS_HUMAN,"82,4",18,24.00%,Clusterin alpha chain
+P07358,CO8B_HUMAN,"75,4",16,15.00%,Complement component C8 beta chain 
+P13671,CO6_HUMAN,"74,8",15,9.00%,Complement component C6 
+P49747,COMP_HUMAN,"74,6",14,15.00%,Cartilage oligomeric matrix protein 
+P02750,A2GL_HUMAN,"71,1",23,25.00%,Leucine-rich alpha-2-glycoprotein 
+P05543,THBG_HUMAN,"70,9",10,23.00%,Thyroxine-binding globulin 
+P08254,MMP3_HUMAN,"69,0",19,13.00%,Stromelysin-1 
+P10643,CO7_HUMAN,"65,4",9,11.00%,Complement component C7
+P02743,SAMP_HUMAN,"62,1",15,27.00%,Serum amyloid P-component
+O75882,ATRN_HUMAN,"61,3",8,7.00%,Attractin 
+P06681,CO2_HUMAN,"60,3",18,10.00%,Complement C2a fragment
+P05154,IPSP_HUMAN,"56,6",15,16.00%,Plasma serine protease inhibitor 
+Q96PD5,PGRP2_HUMAN,"55,9",10,12.00%,N-acetylmuramoyl-L-alanine amidase 
+P02649,APOE_HUMAN,"47,8",10,22.00%,Apolipoprotein E 
+P03952,KLKB1_HUMAN,"47,3",9,9.00%,Plasma kallikrein light chain
+P00742,FA10_HUMAN,"47,0",8,23.00%,Activated factor Xa heavy chain 
+P08185,CBG_HUMAN,"46,0",13,13.00%,Corticosteroid-binding globulin 
+P04259,K2C6B_HUMAN,"43,5",57,9.00%,"Keratin, type II cytoskeletal 6B "
+P35527,K1C9_HUMAN,"39,2",16,6.00%,"Keratin, type I cytoskeletal 9 "
+P00746,CFAD_HUMAN,"35,9",6,33.00%,Complement factor D 
+Q96IY4,CBPB2_HUMAN,"35,7",8,11.00%,Carboxypeptidase B2 
+Q15113,PCOC1_HUMAN,"35,3",3,9.00%,Procollagen C-endopeptidase enhancer 1 
+P01871,IGHM_HUMAN,"33,0",8,11.00%,Ig mu chain C region
+P04003,C4BPA_HUMAN,"32,5",9,8.00%,C4b-binding protein alpha chain 
+P00736,C1R_HUMAN,"32,4",4,6.00%,Complement C1r subcomponent light chain [
+P22352,GPX3_HUMAN,"31,9",6,24.00%,Glutathione peroxidase 3 
+P27169,PON1_HUMAN,"31,1",4,11.00%,Serum paraoxonase/arylesterase 1 
+P02760,AMBP_HUMAN,"30,8",27,10.00%,Trypstatin
+P05452,TETN_HUMAN,"30,3",5,30.00%,Tetranectin 
+P16112,PGCA_HUMAN,"29,7",18,2.00%,Aggrecan core protein 2 
+P02753,RET4_HUMAN,"29,3",7,17.00%,Plasma retinol-binding protein
+P07357,CO8A_HUMAN,"28,6",7,8.00%,Complement component C8 alpha chain
+P08571,CD14_HUMAN,"26,9",6,17.00%,"Monocyte differentiation antigen CD14, membrane-bound form"
+P60709,ACTB_HUMAN,"26,9",5,10.00%,"Actin, cytoplasmic 1, N-terminally processed "
+P36222,CH3L1_HUMAN,"26,5",4,12.00%,Chitinase-3-like protein 1 
+P07225,PROS_HUMAN,"26,3",10,5.00%,Vitamin K-dependent protein S
+Q06033,ITIH3_HUMAN,"26,0",4,6.00%,Inter-alpha-trypsin inhibitor heavy chain H3
+Q7Z3Y8,K1C27_HUMAN,"23,6",17,6.00%,"Keratin, type I cytoskeletal 27 "
+P09871,C1S_HUMAN,"23,0",5,5.00%,Complement C1s subcomponent light chain 
+P15169,CBPN_HUMAN,"22,6",4,5.00%,Carboxypeptidase N catalytic chain 
+P19013,K2C4_HUMAN,"19,8",21,4.00%,"Keratin, type II cytoskeletal 4 "
+P02741,CRP_HUMAN,"18,8",2,11.00%,C-reactive protein
+P08729,K2C7_HUMAN,"18,7",21,4.00%,"Keratin, type II cytoskeletal 7 "
+P00915,CAH1_HUMAN,"18,3",3,9.00%,Carbonic anhydrase 1 
+P08253,MMP2_HUMAN,"17,9",2,5.00%,PEX 
+P22792,CPN2_HUMAN,"17,8",4,4.00%,Carboxypeptidase N subunit 2 
+P01033,TIMP1_HUMAN,"17,3",2,10.00%,Metalloproteinase inhibitor 1 
+Q15848,ADIPO_HUMAN,"17,1",3,10.00%,Adiponectin 
+P35443,TSP4_HUMAN,"16,9",4,3.00%,Thrombospondin-4 
+P0CF74,LAC6_HUMAN,"16,0",3,28.00%,Ig lambda-6 chain C region
+P01023,A2MG_HUMAN,"15,9",3,1.00%,Alpha-2-macroglobulin
+P01834,IGKC_HUMAN,"14,9",2,36.00%,Ig kappa chain C region
+O75636,FCN3_HUMAN,"13,1",2,7.00%,Ficolin-3 
+P43251,BTD_HUMAN,"11,8",2,3.00%,Biotinidase 
+P04075,ALDOA_HUMAN,"10,3",2,3.00%,Fructose-bisphosphate aldolase A 
+Q9UGM5,FETUB_HUMAN,"9,9",2,3.00%,Fetuin-B 
+P18428,LBP_HUMAN,"9,7",4,2.00%,Lipopolysaccharide-binding protein 
+P08637,FCG3A_HUMAN,"9,2",1,5.00%,Low affinity immunoglobulin gamma Fc region receptor III-A 
+Q92954,PRG4_HUMAN,"9,1",2,1.00%,Proteoglycan 4 C-terminal part 
+Q9ULW0,TPX2_HUMAN,"9,1",5,2.00%,Targeting protein for Xklp2 
+Q9NZP8,C1RL_HUMAN,"9,0",1,2.00%,Complement C1r subcomponent-like protein 
+P04278,SHBG_HUMAN,"8,9",1,5.00%,Sex hormone-binding globulin 
+Q8N1N4,K2C78_HUMAN,"8,8",1,3.00%,"Keratin, type II cytoskeletal 78"
+Q12805,FBLN3_HUMAN,"8,7",1,2.00%,EGF-containing fibulin-like extracellular matrix protein 1 
+P26038,MOES_HUMAN,"8,4",1,2.00%,Moesin 
+P55058,PLTP_HUMAN,"8,4",1,3.00%,Phospholipid transfer protein
+Q6PML9,ZNT9_HUMAN,"8,2",2,2.00%,Zinc transporter 9 

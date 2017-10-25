@@ -1,0 +1,86 @@
+Accession no.,Spot,Protein description,Gene name,Fold change
+P43652,676,Afamin,AFM,1.76
+P01009,787,?1-antitrypsin,SERPINA1,1.39
+P04217,822,?1B-glycoprotein,A1BG,1.72
+P01023,215,?2-macroglobulin,A2M,2.89
+P07355,1055,Annexin A2,ANXA2,2.34
+P01008,1019,Antithrombin III,SERPINC1,1.18
+P02647,2285,Apolipoprotein A-I,APOA1,2.23
+O75882,189,Attractin,ATRN,2.15
+P02749,1126,?2-glycoprotein I,APOH,1.82
+P04003,803,C4b binding protein ?-chain,C4BPA,1.46
+P22792,597,Carboxypeptidase N subunit 2,CPN2,2.14
+Q9NQ79,727,Cartilage acidic protein 1,CRTAC1,3.12
+P00450,361,Ceruloplasmin,CP,2.54
+P02746,2158,C1q subcomponent subunit B,C1QB,1.34
+P00736,616,C1r subcomponent,C1R,2.71
+P09871,654,C1s subcomponent,C1S,2.31
+P01024,470,C3,C3,2.1
+P13671,421,C6,C6,1.91
+P10643,584,C7,C7,2.23
+P02748,887,C9,C9,2.17
+P00751,588,Complement factor B,CFB,2.07
+P08603,276,Complement factor H,CFH,1.62
+P05156,1214,Complement factor I,CFI,2.05
+P02675,1158,Fibrinogen ?-chain,FGB,3.48
+P02679,721,Fibrinogen ?-chain,FGG,4.83
+P02751,85,Fibronectin,FN1,4.07
+P06396,665,Gelsolin,GSN,?1.71
+P02790,959,Hemopexin,HPX,1.81
+P05546,760,Heparin cofactor II,SERPIND1,3.55
+P19827,752,Inter-? trypsin inhibitor heavy chain H1,ITIH1,4.01
+Q14624,457,Inter-? trypsin inhibitor heavy chain H4,ITIH4,2.03
+P01042,966,Kininogen 1,KNG1,1.76
+P51884,652,Lumican,LUM,2.5
+Q96PD5,802,N-acetylmuramoyl-L-alanine amidase,PGLYRP2,1.26
+P05155,663,Plasma protease C1 inhibitor,SERPING1,2.04
+Q15113,1326,Procollagen C-endopeptidase enhancer 1,PCOLCE,1.67
+P00734,679,Prothrombin,F2,3.93
+P52566,2609,Rho GDP dissociation inhibitor 2,ARHGDIB,?1.62
+P02768,937,Serum albumin,ALB,1.52
+P27169,1242,Serum paraoxonase/arylesterase 1,PON1,2.76
+P05452,2364,Tetranectin,CLEC3B,?1.51
+P37837,1646,Transaldolase,TALDO1,?1.94
+P02774,1187,Vitamin D binding protein,GC,1.81
+60709,1563,"Actin, cytoplasmic 1",ACTB,?1.45
+P43652,766,Afamin,AFM,2.26
+P01011,1218,?1-antichymotrypsin,SERPINA3,?1.4
+P04217,846,?1B-glycoprotein,A1BG,1.54
+P01023,210,?2-macroglobulin,A2M,2.63
+P07355,1778,Annexin A2,ANXA2,?1.39
+P09525,1868,Annexin A4,ANXA4,?1.36
+P01008,1105,Antithrombin III,SERPINC1,1.5
+P02647,1915,Apolipoprotein A-I,APOA1,?1.39
+P06727,1472,Apolipoprotein A-IV,APOA4,1.58
+P05090,1938,Apolipoprotein D,APOD,?1.43
+Q9NQ79,765,Cartilage acidic protein 1,CRTAC1,2.04
+P00450,396,Ceruloplasmin,CP,1.78
+P10909,1719,Clusterin,CLU,1.62
+P02747,2090,C1q subcomponent subunit C,C1QC,?1.49
+P09871,712,C1s subcomponent,C1S,2.34
+P01024,825,C3,C3,1.79
+P0C0L4,937,C4a,C4A,1.46
+P02748,973,C9,C9,2.22
+P08603,305,Complement factor H,CFH,1.62
+Q03591,1611,Complement factor H–related protein 1,CFHR1,?1.46
+P02679,849,Fibrinogen ?-chain,FGG,7.05
+P02751,44,Fibronectin,FN1,1.44
+P06396,764,Gelsolin,GSN,?1.93
+P22352,2146,Glutathione peroxidase 3,GPX3,?1.27
+P02790,1414,Hemopexin,HPX,1.7
+P01871,864,Ig ?-chain C region,IGHM,3.45
+P35858,776,Insulin-like growth factor binding protein complex acid-labile subunit,IGFALS,2.38
+P19827,856,Inter-? trypsin inhibitor heavy chain H1,ITIH1,4.98
+Q14624,394,Inter-? trypsin inhibitor heavy chain H4,ITIH4,1.85
+P01042,983,Kininogen 1,KNG1,2.12
+P24666,2208,Low molecular weight phosphotyrosine protein phosphatase,ACP1,?1.73
+P15586,840,N-acetylglucosamine-6-sulfatase,GNS,2.41
+P30086,1503,Phosphatidylethanolamine-binding protein 1,PEBP1,1.58
+P80108,385,Phosphatidylinositol-glycan–specific phospholipase D,GPLD1,1.87
+Q8IV08,1338,Phospholipase D3,PLD3,?1.4
+P36955,1346,Pigment epithelium–derived factor,SERPINF1,1.23
+P03952,805,Plasma kallikrein,KLKB1,1.26
+P02760,1867,Protein AMBP,AMBP,1.92
+Q15493,1737,Regucalcin,RGN,?1.56
+Q13228,1297,Selenium-binding protein 1,SELENBP1,1.44
+P04004,818,Vitronectin,VTN,1.22
